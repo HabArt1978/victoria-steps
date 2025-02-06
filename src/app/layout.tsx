@@ -1,4 +1,3 @@
-import Introduction from '@/components/Introduction/Introduction'
 import TheHeader from '@/components/TheHeader/TheHeader'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Roboto } from 'next/font/google'
@@ -22,9 +21,10 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Производство ступеней для лестниц из массива дуба',
+  title:
+    'Производство деревянных ступеней для лестниц из массива дуба в Саранске',
   description:
-    'Производство ступеней для лестниц из массива дуба по оригинальной технологии'
+    'Производство ступеней для лестниц из массива дуба по оригинальной технологии в Саранске'
 }
 
 export default function RootLayout({
@@ -39,9 +39,7 @@ export default function RootLayout({
       >
         <TheHeader />
 
-        <Introduction />
-
-        <main className="mx-auto w-[80%]">{children}</main>
+        <main className="w-full">{children}</main>
       </body>
     </html>
   )

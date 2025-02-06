@@ -11,7 +11,7 @@ const navBarLinks: NavBarLink[] = [
   },
   {
     label: 'контакты',
-    path: '/pages/contacts'
+    path: '/pages/ourContacts'
   },
   {
     label: 'доставка и оплата',

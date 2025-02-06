@@ -9,7 +9,7 @@ export interface NavBarLink {
   path:
     | '/'
     | '/pages/aboutUs'
-    | '/pages/contacts'
+    | '/pages/ourContacts'
     | '/pages/deliverAndPayment'
     | '/pages/portfolio'
 }
