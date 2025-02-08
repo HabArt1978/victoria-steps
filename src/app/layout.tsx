@@ -1,3 +1,4 @@
+import TheFooter from '@/components/TheFooter/TheFooter'
 import TheHeader from '@/components/TheHeader/TheHeader'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Roboto } from 'next/font/google'
@@ -40,6 +41,8 @@ export default function RootLayout({
         <TheHeader />
 
         <main className="w-full">{children}</main>
+
+        <TheFooter />
       </body>
     </html>
   )

@@ -1,6 +1,6 @@
 'use client'
 
-import type { NavBarLink } from '@/library/routesAndLinks/types'
+import type { NavBarLink } from '@/library/routeAndLinkData/types'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { JSX } from 'react'

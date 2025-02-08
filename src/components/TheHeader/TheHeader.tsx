@@ -1,4 +1,4 @@
-import { navBarLinks } from '@/library/routesAndLinks/routesAndLinks'
+import { navBarLinks } from '@/library/routeAndLinkData/routeAndLinkData'
 import Link from 'next/link'
 import type { JSX } from 'react'
 import { FiMenu } from 'react-icons/fi'

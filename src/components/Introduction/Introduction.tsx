@@ -1,8 +1,7 @@
 import introductionImage from '@/assets/images/introduction.webp'
 import Image from 'next/image'
 import type { JSX } from 'react'
-import { FaVk, FaWhatsapp } from 'react-icons/fa'
-import { RiTelegram2Fill } from 'react-icons/ri'
+import Social from '../Social/Social'
 
 const Introduction = (): JSX.Element => {
   return (
@@ -19,7 +18,7 @@ const Introduction = (): JSX.Element => {
         fill
       />
 
-      <div className="absolute left-[10%] top-[45%] flex w-[80%] justify-between rounded-3xl text-4xl text-white">
+      <div className="absolute left-[10%] top-[45%] flex w-[80%] flex-row justify-between rounded-3xl text-4xl text-white">
         <div className="border-l-4 border-orange-600 lg:flex-row">
           <div className="card ml-4 rounded-box bg-[rgba(55,65,81,0.6)]">
             <h1 className="mx-auto p-4 text-4xl text-white">
@@ -30,23 +29,10 @@ const Introduction = (): JSX.Element => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between">
-          <button className="btn btn-circle m-0 border-none bg-transparent p-0 hover:scale-110 hover:bg-transparent">
-            <FaVk className="h-10 w-10 text-black hover:scale-110 hover:text-blue-500" />
-          </button>
-
-          <button className="btn btn-circle m-0 border-none bg-transparent p-0 hover:scale-110 hover:bg-transparent">
-            <FaWhatsapp className="h-10 w-10 text-black hover:scale-110 hover:text-green-600" />
-          </button>
-
-          <button className="btn btn-circle m-0 border-none bg-transparent p-0 hover:scale-110 hover:bg-transparent">
-            <RiTelegram2Fill className="h-10 w-10 text-black hover:scale-110 hover:text-blue-600" />
-          </button>
-        </div>
+        <Social position="vertical" />
       </div>
     </header>
   )
 }
 
 export default Introduction
-// bg-[rgba(250,250,250,0.8)]
