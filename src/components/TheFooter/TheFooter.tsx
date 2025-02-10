@@ -3,8 +3,8 @@ import Social from '../Social/Social'
 
 const TheFooter = (): JSX.Element => {
   return (
-    <footer className="footer mt-10 grid grid-cols-3 gap-4 bg-neutral p-8 text-neutral-content">
-      <aside className="33vw grid-flow-col items-center">
+    <footer className="footer mt-20 grid grid-cols-3 bg-neutral p-8 text-neutral-content">
+      <aside className="my-auto flex items-center">
         <svg
           width="36"
           height="36"
@@ -19,7 +19,7 @@ const TheFooter = (): JSX.Element => {
         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
       </aside>
 
-      <aside className="33vw mx-auto text-center">
+      <aside className="mx-auto my-auto text-center">
         <p className="font-bold">
           ACME Industries Ltd.
           <br />
