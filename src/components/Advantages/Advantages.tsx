@@ -1,13 +1,13 @@
-import { advantagesComponentData as advantages } from '@/library/advantagesComponentData/advantagesComponentData'
+import { advantagesData } from '@/library/dataForComponents/advantagesData/advantagesData'
 import type { JSX } from 'react'
-import PageContainer from '../PageContainer/PageContainer'
+import SectionContainer from '../Containers/SectionContainer'
 
 const Advantages = (): JSX.Element => {
   return (
-    <PageContainer>
+    <SectionContainer>
       <h1 className="hidden">Наши преимущества</h1>
       <ul className="flex justify-between">
-        {advantages.map((item, idx) => (
+        {advantagesData.map((item, idx) => (
           <li
             key={item.title + idx}
             className="flex w-[18%] flex-col items-center space-y-4 text-center"
@@ -21,7 +21,7 @@ const Advantages = (): JSX.Element => {
           </li>
         ))}
       </ul>
-    </PageContainer>
+    </SectionContainer>
   )
 }
 

@@ -3,9 +3,9 @@ import { FaRegHandshake } from 'react-icons/fa6'
 import { GiWallet } from 'react-icons/gi'
 import { GrValidate } from 'react-icons/gr'
 import { TbTruckDelivery } from 'react-icons/tb'
-import type { AdvantagesComponentData } from './types'
+import type { AdvantagesData } from './types'
 
-export const advantagesComponentData: AdvantagesComponentData[] = [
+export const advantagesData: AdvantagesData[] = [
   {
     icon: FaRegHandshake,
     title: 'Доверие покупателей',

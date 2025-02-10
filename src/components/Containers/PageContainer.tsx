@@ -6,7 +6,7 @@ const PageContainer = ({
 }: Readonly<{
   children: React.ReactNode
 }>): JSX.Element => {
-  return <section className="mx-auto w-[80%]">{children}</section>
+  return <div className="mx-auto w-[80%]">{children}</div>
 }
 
 export default PageContainer
