@@ -22,6 +22,7 @@ const OurProduction = (): JSX.Element => {
                     src={card.image}
                     alt={`изображение "${card.title}"`}
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     fill
                   />
                 </div>
@@ -61,6 +62,7 @@ const OurProduction = (): JSX.Element => {
                     alt={`изображение "${card.title}"`}
                     className="object-cover"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               </div>

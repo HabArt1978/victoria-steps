@@ -1,7 +1,13 @@
+import PageContainer from '@/components/Containers/PageContainer'
+import OurContacts from '@/components/OurContacts/OurContacts'
 import type { JSX } from 'react'
 
-const OurContacts = (): JSX.Element => {
-  return <h1 className="mt-6 text-center text-6xl">Наши контакты</h1>
+const OurContactsPage = (): JSX.Element => {
+  return (
+    <PageContainer>
+      <OurContacts />
+    </PageContainer>
+  )
 }
 
-export default OurContacts
+export default OurContactsPage

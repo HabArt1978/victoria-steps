@@ -36,11 +36,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} flex min-h-screen flex-col antialiased`}
       >
         <TheHeader />
 
-        <main className="w-full">{children}</main>
+        <main className="w-full flex-1">{children}</main>
 
         <TheFooter />
       </body>

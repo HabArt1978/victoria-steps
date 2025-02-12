@@ -6,7 +6,7 @@ import Social from '../Social/Social'
 const Introduction = (): JSX.Element => {
   return (
     <header
-      className="relative -top-20 -mb-20 h-[500px] w-full overflow-hidden"
+      className="relative -top-20 -mb-20 h-[650px] w-full overflow-hidden"
       role="img"
       aria-label="Процесс производства ступеней для лестниц на нашем предприятии"
     >

@@ -11,21 +11,21 @@ const Social = ({ position }: Position): JSX.Element => {
     >
       <Link
         href="#"
-        className="btn btn-circle m-0 border-none bg-transparent p-0 text-neutral-content hover:scale-110 hover:bg-transparent"
+        className="btn btn-circle m-0 border-none bg-transparent p-0 text-neutral-content hover:rotate-12 hover:scale-110 hover:bg-transparent"
       >
         <FaVk className="h-10 w-10 hover:scale-110 hover:text-blue-500" />
       </Link>
 
       <Link
         href="#"
-        className="btn btn-circle m-0 border-none bg-transparent p-0 hover:scale-110 hover:bg-transparent"
+        className="btn btn-circle m-0 border-none bg-transparent p-0 hover:rotate-12 hover:scale-110 hover:bg-transparent"
       >
         <FaWhatsapp className="h-10 w-10 text-neutral-content hover:scale-110 hover:text-green-600" />
       </Link>
 
       <Link
         href="#"
-        className="btn btn-circle m-0 border-none bg-transparent p-0 hover:scale-110 hover:bg-transparent"
+        className="btn btn-circle m-0 border-none bg-transparent p-0 hover:rotate-12 hover:scale-110 hover:bg-transparent"
       >
         <RiTelegram2Fill className="h-10 w-10 text-neutral-content hover:scale-110 hover:text-blue-600" />
       </Link>
