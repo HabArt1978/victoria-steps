@@ -13,7 +13,7 @@ const HomePage = (): JSX.Element => {
       <PageContainer>
         <Advantages />
         <OurProduction />
-        <OurWorks />
+        <OurWorks quantity={6} />
       </PageContainer>
     </>
   )

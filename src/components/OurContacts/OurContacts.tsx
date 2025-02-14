@@ -15,12 +15,12 @@ const OurContacts = (): JSX.Element => {
         <div className="w-1/2 px-16 py-8">
           <h1 className="text-5xl">Как нас найти</h1>
 
-          <address className="space-y-4 py-12 font-normal not-italic text-neutral no-underline">
+          <address className="space-y-4 py-12 font-normal not-italic no-underline">
             <p>
-              Телефон:{' '}
+              Телефон:
               <Link
                 href="tel:+78888888888"
-                className="text-orange-600"
+                className="relative ml-2 text-orange-600 before:absolute before:bottom-[-2px] before:left-0 before:h-[1px] before:w-0 before:bg-orange-600 before:transition-all before:duration-300 before:content-[''] hover:before:w-full"
                 target="_blank"
               >
                 {contacts.phone}
@@ -30,7 +30,7 @@ const OurContacts = (): JSX.Element => {
               E-mail:{' '}
               <Link
                 href="mailto:viktorua18@yandex.ru"
-                className="text-orange-600"
+                className="relative ml-2 text-orange-600 before:absolute before:bottom-[-2px] before:left-0 before:h-[1px] before:w-0 before:bg-orange-600 before:transition-all before:duration-300 before:content-[''] hover:before:w-full"
                 target="_blank"
               >
                 {contacts.email}

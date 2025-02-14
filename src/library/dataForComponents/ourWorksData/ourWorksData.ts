@@ -14,5 +14,65 @@ export const ourWorksData = [
   {
     image: ourWorkSecondImage,
     alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkSecondImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkFirsImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkZeroImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkZeroImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkFirsImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkSecondImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkSecondImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkFirsImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkZeroImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkZeroImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkFirsImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkSecondImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkSecondImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkFirsImage,
+    alt: 'Изображение лестницы с нашими ступенями'
+  },
+  {
+    image: ourWorkZeroImage,
+    alt: 'Изображение лестницы с нашими ступенями'
   }
 ]

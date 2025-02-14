@@ -13,7 +13,7 @@ const Social = ({ position }: Position): JSX.Element => {
         href="#"
         className="btn btn-circle m-0 border-none bg-transparent p-0 text-neutral-content hover:rotate-12 hover:scale-110 hover:bg-transparent"
       >
-        <FaVk className="h-10 w-10 hover:scale-110 hover:text-blue-500" />
+        <FaVk className="h-10 w-10 hover:scale-110 hover:text-blue-700" />
       </Link>
 
       <Link
@@ -27,7 +27,7 @@ const Social = ({ position }: Position): JSX.Element => {
         href="#"
         className="btn btn-circle m-0 border-none bg-transparent p-0 hover:rotate-12 hover:scale-110 hover:bg-transparent"
       >
-        <RiTelegram2Fill className="h-10 w-10 text-neutral-content hover:scale-110 hover:text-blue-600" />
+        <RiTelegram2Fill className="h-10 w-10 text-neutral-content hover:scale-110 hover:text-blue-500" />
       </Link>
     </div>
   )

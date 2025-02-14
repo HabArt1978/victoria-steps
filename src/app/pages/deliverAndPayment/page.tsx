@@ -1,7 +1,13 @@
+import PageContainer from '@/components/Containers/PageContainer'
+import DeliverAndPayment from '@/components/DeliverAndPayment/DeliverAndPayment'
 import type { JSX } from 'react'
 
 const DeliverAndPaymentPage = (): JSX.Element => {
-  return <h1 className="mt-6 text-center text-6xl">Доставка и оплата</h1>
+  return (
+    <PageContainer>
+      <DeliverAndPayment />
+    </PageContainer>
+  )
 }
 
 export default DeliverAndPaymentPage

@@ -3,7 +3,7 @@ import Social from '../Social/Social'
 
 const TheFooter = (): JSX.Element => {
   return (
-    <footer className="footer mt-20 grid grid-cols-3 bg-neutral p-8 text-neutral-content">
+    <footer className="footer grid grid-cols-3 bg-neutral p-8 text-neutral-content">
       <aside className="my-auto flex items-center">
         <svg
           width="36"
