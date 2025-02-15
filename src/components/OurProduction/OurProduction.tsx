@@ -2,6 +2,7 @@ import { ourProductionData } from '@/library/dataForComponents/ourProductionData
 import Image from 'next/image'
 import type { JSX } from 'react'
 import SectionContainer from '../Containers/SectionContainer'
+import { btnClasses } from './longClasses'
 
 const OurProduction = (): JSX.Element => {
   return (
@@ -32,9 +33,7 @@ const OurProduction = (): JSX.Element => {
                   <p className="overflow-y-auto">{card.description}</p>
 
                   <div className="card-actions justify-end">
-                    <button className="btn bg-orange-500 text-white transition duration-150 hover:bg-slate-700 hover:shadow-md hover:shadow-orange-600 active:shadow-inner">
-                      Узнать больше
-                    </button>
+                    <button className={`${btnClasses}`}>Узнать больше</button>
                   </div>
                 </div>
               </div>
@@ -50,9 +49,7 @@ const OurProduction = (): JSX.Element => {
                   <p className="overflow-y-auto">{card.description}</p>
 
                   <div className="card-actions justify-start">
-                    <button className="btn bg-orange-500 text-white transition duration-150 hover:bg-slate-700 hover:shadow-md hover:shadow-orange-600 active:shadow-inner">
-                      Узнать больше
-                    </button>
+                    <button className={btnClasses}>Узнать больше</button>
                   </div>
                 </div>
 

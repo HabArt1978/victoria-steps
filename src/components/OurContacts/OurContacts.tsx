@@ -36,8 +36,14 @@ const OurContacts = (): JSX.Element => {
                 {contacts.email}
               </Link>
             </p>
-            <p>Адрес: {contacts.address}</p>
-            <p>Время работы: {contacts.openingHours}</p>
+            <p>
+              Адрес:
+              <span className="ml-4">{contacts.address}</span>
+            </p>
+            <p>
+              Время работы:
+              <span className="ml-4">{contacts.openingHours}</span>
+            </p>
           </address>
         </div>
       </div>
