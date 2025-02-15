@@ -16,8 +16,12 @@ const Advantages = (): JSX.Element => {
               size={40}
               color="#ea580c"
             />
-            <h2 className="text-xl text-orange-600">{item.title}</h2>
-            <p className="text-md text-center">{item.description}</p>
+            <h2 className="font-amaticBold text-3xl text-orange-600">
+              {item.title}
+            </h2>
+            <p className="text-md text-center font-robotoMono font-light">
+              {item.description}
+            </p>
           </li>
         ))}
       </ul>

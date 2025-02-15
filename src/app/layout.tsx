@@ -1,25 +1,15 @@
+import {
+  fontAmaticBold,
+  fontAmaticRegular,
+  fontRobotoMono,
+  fontRubikDirtRegular
+} from '@/assets/fonts'
 import TheFooter from '@/components/TheFooter/TheFooter'
 import TheHeader from '@/components/TheHeader/TheHeader'
+import { cn } from '@/utils/cn'
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono, Roboto } from 'next/font/google'
 import type { JSX } from 'react'
 import './globals.css'
-
-const roboto = Roboto({
-  variable: '--font-roboto',
-  subsets: ['cyrillic'],
-  weight: ['100', '300', '400', '500', '700', '900']
-})
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
-})
 
 export const metadata: Metadata = {
   title:
@@ -36,7 +26,13 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} flex min-h-screen flex-col antialiased`}
+        className={cn(
+          'antialiased` flex min-h-screen flex-col',
+          fontRobotoMono.variable,
+          fontRubikDirtRegular.variable,
+          fontAmaticRegular.variable,
+          fontAmaticBold.variable
+        )}
       >
         <TheHeader />
 

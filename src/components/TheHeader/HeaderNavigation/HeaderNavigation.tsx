@@ -4,6 +4,7 @@ import type { NavBarLink } from '@/library/routeAndLinkData/types'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { JSX } from 'react'
+import { headerLink } from './twStyles'
 
 interface NavBarLinks {
   navLinks: NavBarLink[]
@@ -25,7 +26,7 @@ const HeaderNavigation = ({ navLinks }: NavBarLinks): JSX.Element => {
             >
               <Link
                 href={link.path}
-                className={`btn btn-ghost btn-sm transition duration-300 hover:border-orange-500 hover:bg-slate-100 hover:bg-transparent hover:text-orange-500 ${isActive ? 'bg-slate-100 text-orange-500 shadow-lg' : ''}`}
+                className={headerLink(isActive)}
               >
                 {link.label}
               </Link>

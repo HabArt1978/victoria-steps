@@ -18,13 +18,13 @@ const Introduction = (): JSX.Element => {
         fill
       />
 
-      <div className="absolute left-[10%] top-[45%] flex w-[80%] flex-row justify-between rounded-3xl text-4xl text-white">
+      <div className="absolute left-[10%] top-[55%] flex w-[80%] flex-row justify-between rounded-3xl text-4xl text-white">
         <div className="border-l-4 border-orange-600 lg:flex-row">
-          <div className="card ml-4 rounded-box bg-[rgba(55,65,81,0.6)]">
-            <h1 className="mx-auto p-4 text-4xl text-white">
-              <span className="block">Производство ступеней</span>
-              <span className="block">из массива дуба</span>
-              <span className="block text-5xl">в Саранске</span>
+          <div className="card ml-4 rounded-box bg-amber-900 bg-opacity-75">
+            <h1 className="text-gray-50xl mx-auto p-4 font-rubikDirt text-white">
+              <span className="block text-4xl">Производство ступеней</span>
+              <span className="block text-4xl">из массива дуба</span>
+              <span className="block text-6xl">в Саранске</span>
             </h1>
           </div>
         </div>
