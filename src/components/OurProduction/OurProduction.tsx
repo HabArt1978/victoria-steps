@@ -2,12 +2,14 @@ import { ourProductionData } from '@/library/dataForComponents/ourProductionData
 import Image from 'next/image'
 import type { JSX } from 'react'
 import SectionContainer from '../Containers/SectionContainer'
-import { btnClasses } from './longClasses'
+import { btnClasses } from './twStyles'
 
 const OurProduction = (): JSX.Element => {
   return (
     <SectionContainer>
-      <h1 className="text-center text-5xl">Наше производство</h1>
+      <h1 className="text-center font-rubikDirt text-6xl text-amber-700">
+        Наше производство
+      </h1>
       <ul className="mt-20 space-y-6">
         {ourProductionData.map((card, idx) => {
           const index = idx + 1
@@ -29,10 +31,14 @@ const OurProduction = (): JSX.Element => {
                 </div>
 
                 <div className="card-body h-96">
-                  <h2 className="card-title">{card.title}</h2>
-                  <p className="overflow-y-auto">{card.description}</p>
+                  <h2 className="font-amaticBold text-4xl text-orange-600">
+                    {card.title}
+                  </h2>
+                  <p className="overflow-y-auto font-robotoMono text-lg font-light">
+                    {card.description}
+                  </p>
 
-                  <div className="card-actions justify-end">
+                  <div className="card-actions mt-2 justify-end">
                     <button className={`${btnClasses}`}>Узнать больше</button>
                   </div>
                 </div>
@@ -45,10 +51,14 @@ const OurProduction = (): JSX.Element => {
                 key={card.title + idx}
               >
                 <div className="card-body h-96">
-                  <h2 className="card-title">{card.title}</h2>
-                  <p className="overflow-y-auto">{card.description}</p>
+                  <h2 className="font-amaticBold text-4xl text-orange-600">
+                    {card.title}
+                  </h2>
+                  <p className="overflow-y-auto font-robotoMono text-lg font-light">
+                    {card.description}
+                  </p>
 
-                  <div className="card-actions justify-start">
+                  <div className="card-actions mt-2 justify-start">
                     <button className={btnClasses}>Узнать больше</button>
                   </div>
                 </div>
