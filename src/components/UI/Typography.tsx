@@ -66,7 +66,7 @@ export const Li = ({
   children: ReactNode
   className?: string
 }): JSX.Element => (
-  <li className={cn('font-robotoMono text-lg font-normal', className)}>
+  <li className={cn('font-robotoMono text-lg font-light', className)}>
     {children}
   </li>
 )

@@ -28,7 +28,7 @@ const DeliverAndPayment = (): JSX.Element => {
         </ul>
 
         <H3 className="mt-6">Безналичный расчет</H3>
-        <P className="ml-4">
+        <P className="indent-4">
           Оплата осуществляется на основании выставленных счетов. После оплаты
           высылаются все соответствующие документы.
         </P>

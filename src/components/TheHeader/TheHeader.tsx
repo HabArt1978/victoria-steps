@@ -13,7 +13,7 @@ const TheHeader = (): JSX.Element => {
           className="btn btn-ghost rounded-2xl border-b-orange-500 border-l-red-700 border-r-orange-500 border-t-red-700 text-xl"
         >
           <span className="text-orange-500">
-            STEPS<span className="m-0 text-red-600">Link</span>
+            Company<span className="m-0 text-red-600">Label</span>
           </span>
         </Link>
       </div>
