@@ -2,6 +2,7 @@ import introductionImage from '@/assets/images/introduction.webp'
 import Image from 'next/image'
 import type { JSX } from 'react'
 import Social from '../Social/Social'
+import { H1 } from '../UI/Typography'
 
 const Introduction = (): JSX.Element => {
   return (
@@ -21,11 +22,11 @@ const Introduction = (): JSX.Element => {
       <div className="absolute left-[10%] top-[55%] flex w-[80%] flex-row justify-between rounded-3xl text-4xl text-white">
         <div className="border-l-4 border-orange-600 lg:flex-row">
           <div className="card ml-4 rounded-box bg-amber-900 bg-opacity-75">
-            <h1 className="text-gray-50xl mx-auto p-4 font-rubikDirt text-white">
+            <H1 className="p-4 text-start text-white">
               <span className="block text-4xl">Производство ступеней</span>
               <span className="block text-4xl">из массива дуба</span>
               <span className="block text-6xl">в Саранске</span>
-            </h1>
+            </H1>
           </div>
         </div>
 

@@ -9,7 +9,9 @@ import type { QuantityOfWork } from './types'
 const OurWorks = ({ quantity }: QuantityOfWork): JSX.Element => {
   return (
     <SectionContainer>
-      <h1 className="text-center text-5xl">Наши работы</h1>
+      <h1 className="text-center font-rubikDirt text-6xl text-amber-700">
+        Наши работы
+      </h1>
 
       <ul className="mt-20 flex flex-wrap justify-center gap-6">
         {ourWorksData.map(({ image, alt }, idx) => {

@@ -1,5 +1,6 @@
 'use client'
 
+import { P } from '@/components/UI/Typography'
 import type { NavBarLink } from '@/library/routeAndLinkData/types'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -28,7 +29,7 @@ const HeaderNavigation = ({ navLinks }: NavBarLinks): JSX.Element => {
                 href={link.path}
                 className={headerLink(isActive)}
               >
-                {link.label}
+                <P className="text-sm uppercase">{link.label}</P>
               </Link>
             </li>
           )

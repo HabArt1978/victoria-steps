@@ -1,70 +1,70 @@
 import type { JSX } from 'react'
 import SectionContainer from '../Containers/SectionContainer'
+import { H1, H2, H3, Li, P } from '../UI/Typography'
 
 const DeliverAndPayment = (): JSX.Element => {
   return (
     <SectionContainer>
-      <h1 className="mt-6 text-center text-4xl">Доставка и оплата</h1>
+      <H1>Доставка и оплата</H1>
 
       <div className="mx-auto mt-10 max-w-[60%] space-y-4">
-        <p>
+        <P className="indent-4">
           Вы можете выбрать для себя наиболее удобные способы оплаты и доставки
           приобретенных товаров и, таким образом, сэкономить свое время.
-        </p>
+        </P>
 
         <div className="divider"></div>
 
-        <h2 className="mt-6 text-2xl font-semibold">Оплата</h2>
-        <p className="indent-4">
+        <H2>Оплата</H2>
+        <P className="indent-4">
           Оплата возможна наличными либо на расчётный счёт.
-        </p>
+        </P>
 
-        <h3 className="mt-6 text-lg font-semibold">Наличный расчет</h3>
+        <H3 className="mt-6">Наличный расчет</H3>
         <ul className="list-disc space-y-2 pl-6">
-          <li>
+          <Li>
             Оплата производится в офисе <strong>«ООО Виктория»</strong>.
-          </li>
+          </Li>
         </ul>
 
-        <h3 className="mt-6 text-lg font-semibold">Безналичный расчет</h3>
-        <p className="ml-4">
+        <H3 className="mt-6">Безналичный расчет</H3>
+        <P className="ml-4">
           Оплата осуществляется на основании выставленных счетов. После оплаты
           высылаются все соответствующие документы.
-        </p>
+        </P>
 
-        <p>Оплатить покупку можно:</p>
+        <P>Оплатить покупку можно:</P>
         <ul className="list-disc space-y-2 pl-6">
-          <li>Безналичным расчетом (для юридических лиц);</li>
+          <Li>Безналичным расчетом (для юридических лиц);</Li>
         </ul>
 
         <div className="divider"></div>
 
-        <h2 className="mt-6 text-2xl font-semibold">Доставка</h2>
+        <H2 className="mt-6">Доставка</H2>
 
-        <h3 className="mt-6 text-lg font-semibold">Доставка курьером</h3>
+        <H3 className="mt-6">Доставка курьером</H3>
         <ul className="list-disc space-y-2 pl-6">
-          <li>
+          <Li>
             Делаете заявку на электронную почту с указанием контактных данных.
-          </li>
-          <li>С вами созванивается менеджер и подтверждает заказ.</li>
-          <li>Доставка осуществляется после 100% оплаты.</li>
-          <li>Доставка осуществляется без разгрузки.</li>
-          <li>
-            <p>
+          </Li>
+          <Li>С вами созванивается менеджер и подтверждает заказ.</Li>
+          <Li>Доставка осуществляется после 100% оплаты.</Li>
+          <Li>Доставка осуществляется без разгрузки.</Li>
+          <Li className="uppercase text-amber-700">
+            <P className="font-semibold">
               Если машина прибыла в пункт назначения, но услуга не была оказана
               по вине клиента, то будет выставлен счёт за «холостой прогон».
-            </p>
-            <br></br>
-            <p>
+            </P>
+            <P className="mt-4 font-semibold">
               Тариф данной услуги равен тарифу доставки груза, который был
               рассчитан при оформлении заявки.
-            </p>
-          </li>
+            </P>
+          </Li>
         </ul>
 
-        <h3 className="mt-6 text-lg font-semibold">Самовывоз</h3>
+        <H3 className="mt-6">Самовывоз</H3>
         <ul className="list-disc space-y-2 pl-6">
-          <li>Самовывоз возможен со склада компании в вашем городе.</li>
+          <Li>Самовывоз возможен со склада компании в вашем городе.</Li>
         </ul>
       </div>
     </SectionContainer>

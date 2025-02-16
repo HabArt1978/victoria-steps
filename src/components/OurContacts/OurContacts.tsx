@@ -2,7 +2,9 @@ import { ourContactsData as contacts } from '@/library/dataForComponents/ourCont
 import Link from 'next/link'
 import type { JSX } from 'react'
 import SectionContainer from '../Containers/SectionContainer'
+import { H1, P } from '../UI/Typography'
 import YandexMap from './YandexMap/YandexMap'
+import { contactsLink } from './twStyles'
 
 const OurContacts = (): JSX.Element => {
   return (
@@ -13,37 +15,37 @@ const OurContacts = (): JSX.Element => {
         </div>
 
         <div className="w-1/2 px-16 py-8">
-          <h1 className="text-5xl">Как нас найти</h1>
+          <H1 className="text-start">Как нас найти</H1>
 
           <address className="space-y-4 py-12 font-normal not-italic no-underline">
-            <p>
+            <P>
               Телефон:
               <Link
                 href="tel:+78888888888"
-                className="relative ml-2 text-orange-600 before:absolute before:bottom-[-2px] before:left-0 before:h-[1px] before:w-0 before:bg-orange-600 before:transition-all before:duration-300 before:content-[''] hover:before:w-full"
+                className={`${contactsLink}`}
                 target="_blank"
               >
                 {contacts.phone}
               </Link>
-            </p>
-            <p>
+            </P>
+            <P>
               E-mail:{' '}
               <Link
                 href="mailto:viktorua18@yandex.ru"
-                className="relative ml-2 text-orange-600 before:absolute before:bottom-[-2px] before:left-0 before:h-[1px] before:w-0 before:bg-orange-600 before:transition-all before:duration-300 before:content-[''] hover:before:w-full"
+                className={`${contactsLink}`}
                 target="_blank"
               >
                 {contacts.email}
               </Link>
-            </p>
-            <p>
+            </P>
+            <P>
               Адрес:
               <span className="ml-4">{contacts.address}</span>
-            </p>
-            <p>
+            </P>
+            <P>
               Время работы:
               <span className="ml-4">{contacts.openingHours}</span>
-            </p>
+            </P>
           </address>
         </div>
       </div>
