@@ -1,7 +1,7 @@
 import type { JSX } from 'react'
-import TheBanner from './Banner/TheBanner'
+import TheBanner from './TheBanner/TheBanner'
 
-const Introduction = (): JSX.Element => {
+const TheIntroduction = (): JSX.Element => {
   return (
     <section
       style={{
@@ -15,4 +15,4 @@ const Introduction = (): JSX.Element => {
   )
 }
 
-export default Introduction
+export default TheIntroduction
