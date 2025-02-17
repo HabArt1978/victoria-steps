@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## This project uses the following dependencies
+
+"node": "20.16.0",
+"pnpm": "9.15.4"
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm install
-# or
 pnpm install
-
-npm run dev
-# or
 pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js - is a React framework for building full-stack web applications.
 
-## Learn More
+- TypeScript - is a strongly typed programming language that builds on JavaScript.
 
-To learn more about Next.js, take a look at the following resources:
+- Tailwind CSS - is a utilitarian CSS framework that allows you to quickly create user interfaces using predefined classes.
+  Infrastructure used to work with tailwindcss:
+  1. daisyUI - is a component library built on top of Tailwind CSS. It adds ready-made, stylish and customizable UI components.
+  2. tailwind-merge - utility function to efficiently merge Tailwind CSS classes in JS without style conflicts.
+  3. clsx - is a small utility library for JavaScript that helps you conveniently combine CSS classes. It is especially useful when working with Tailwind CSS, where you often have to dynamically generate classes based on conditions. clsx simplifies class management, making code more readable and maintainable.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Volta - is a JavaScript tool manager that helps you manage versions of Node.js, npm, Yarn, and other tools in your project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    Start using Volta:
+     1.  Download the installer from the official Volta website ( https://volta.sh/ ) and follow the instructions.
+     2.  Make sure Volta is installed correctly: ( volta --version )
+     3.  Volta makes it easy to install the right version of Node.js: ( volta install node )
+     4.  To install a specific version of Node.js: ( volta install node@20.16.0 )
+     Read more - https://volta.sh/
