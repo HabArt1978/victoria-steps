@@ -1,33 +1,42 @@
 import Link from 'next/link'
 import type { JSX } from 'react'
-import { FaVk, FaWhatsapp } from 'react-icons/fa'
+import { FaVk } from 'react-icons/fa'
+import { IoIosMail, IoLogoWhatsapp } from 'react-icons/io'
 import { RiTelegram2Fill } from 'react-icons/ri'
+import { socialLink } from './twStyles'
 import type { Position } from './types'
 
 const Social = ({ position }: Position): JSX.Element => {
   return (
     <div
-      className={`flex ${position === 'horizontal' ? 'flex-row justify-self-end' : 'flex-col'} justify-between`}
+      className={`flex ${position === 'horizontal' ? 'my-auto flex-row justify-self-end' : 'absolute bottom-0 right-0 flex-col space-y-4'} justify-between`}
     >
       <Link
         href="#"
-        className="btn btn-circle m-0 border-none bg-transparent p-0 text-neutral-content hover:rotate-12 hover:scale-110 hover:bg-transparent"
+        className={socialLink(position === 'horizontal')}
       >
-        <FaVk className="h-10 w-10 hover:scale-110 hover:text-blue-700" />
+        <IoIosMail className="h-10 w-10 text-white transition-colors group-hover:text-red-600" />
       </Link>
 
       <Link
         href="#"
-        className="btn btn-circle m-0 border-none bg-transparent p-0 hover:rotate-12 hover:scale-110 hover:bg-transparent"
+        className={socialLink(position === 'horizontal')}
       >
-        <FaWhatsapp className="h-10 w-10 text-neutral-content hover:scale-110 hover:text-green-600" />
+        <FaVk className="hover: h-10 w-10 text-white transition-colors group-hover:text-blue-700" />
       </Link>
 
       <Link
         href="#"
-        className="btn btn-circle m-0 border-none bg-transparent p-0 hover:rotate-12 hover:scale-110 hover:bg-transparent"
+        className={socialLink(position === 'horizontal')}
       >
-        <RiTelegram2Fill className="h-10 w-10 text-neutral-content hover:scale-110 hover:text-blue-500" />
+        <IoLogoWhatsapp className="h-10 w-10 text-white transition-colors group-hover:text-green-600" />
+      </Link>
+
+      <Link
+        href="#"
+        className={socialLink(position === 'horizontal')}
+      >
+        <RiTelegram2Fill className="h-10 w-10 text-white transition-colors group-hover:text-blue-500" />
       </Link>
     </div>
   )
