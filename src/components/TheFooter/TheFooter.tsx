@@ -20,7 +20,7 @@ const TheFooter = (): JSX.Element => {
       </aside>
 
       <aside className="mx-auto my-auto text-center">
-        <p className="font-amaticBold text-xl font-bold">
+        <p className="font-amaticBold text-xl font-bold tracking-wider">
           {`OOO "Виктория"`}
           <br />
           Ступени для лестниц из массива дуба.

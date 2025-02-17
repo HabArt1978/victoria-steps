@@ -1,12 +1,15 @@
+import { cn } from '@/utils/cn'
 import type { JSX } from 'react'
 import React from 'react'
 
 const PageContainer = ({
-  children
+  children,
+  className
 }: Readonly<{
   children: React.ReactNode
+  className?: string
 }>): JSX.Element => {
-  return <div className="mx-auto w-[80%]">{children}</div>
+  return <div className={cn('mx-auto w-[80%]', className)}>{children}</div>
 }
 
 export default PageContainer

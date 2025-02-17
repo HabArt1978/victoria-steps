@@ -7,9 +7,9 @@ import { btnClasses } from './twStyles'
 
 const OurProduction = (): JSX.Element => {
   return (
-    <SectionContainer>
-      <H1>Наше производство</H1>
-      <ul className="mt-20 space-y-6">
+    <SectionContainer className="mt-0">
+      <H1 className="mb-20">Наше производство</H1>
+      <ul className="space-y-6">
         {ourProductionData.map((card, idx) => {
           const index = idx + 1
 
