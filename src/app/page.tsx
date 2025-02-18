@@ -1,8 +1,9 @@
 import Advantages from '@/components/Advantages/Advantages'
 import PageContainer from '@/components/Containers/PageContainer'
 import OurProduction from '@/components/OurProduction/OurProduction'
-import OurWorks from '@/components/OurWorks/OurWorks'
+import OurWorksList from '@/components/OurWorksList/OurWorksList'
 import TheIntroduction from '@/components/TheIntroduction/TheIntroduction'
+import { ourWorksData } from '@/library/dataForComponents/ourWorksData/ourWorksData'
 import type { JSX } from 'react'
 
 const HomePage = (): JSX.Element => {
@@ -13,7 +14,10 @@ const HomePage = (): JSX.Element => {
       <PageContainer className="-mt-24">
         <Advantages />
         <OurProduction />
-        <OurWorks quantity={6} />
+        <OurWorksList
+          quantity={6}
+          data={ourWorksData}
+        />
       </PageContainer>
     </>
   )
