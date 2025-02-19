@@ -6,6 +6,7 @@ import {
 } from '@/assets/fonts'
 import TheFooter from '@/components/TheFooter/TheFooter'
 import TheHeader from '@/components/TheHeader/TheHeader'
+import TheMenu from '@/components/UI/TheMenu'
 import { cn } from '@/utils/cn'
 import type { Metadata } from 'next'
 import type { JSX } from 'react'
@@ -39,6 +40,7 @@ export default function RootLayout({
         <main className="w-full flex-1">{children}</main>
 
         <TheFooter />
+        <TheMenu />
       </body>
     </html>
   )
