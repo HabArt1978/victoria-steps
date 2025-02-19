@@ -17,6 +17,7 @@ const TheBanner = (): JSX.Element => {
         placeholder="blur"
         className="absolute left-0 top-0 object-cover object-center"
         fill
+        fetchPriority="high"
       />
 
       <div className="absolute left-[10%] top-[55%] flex w-[80%] flex-row justify-between rounded-3xl text-4xl text-white">

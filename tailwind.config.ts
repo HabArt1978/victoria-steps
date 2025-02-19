@@ -9,6 +9,14 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
+    screens: {
+      // стили для xsm: '320px' будут применены в диапазоне >=320px && <=640px
+      xsm: '320px',
+      sm: '640px',
+      md: '900px',
+      lg: '1100px',
+      xl: '1420px'
+    },
     extend: {
       colors: {
         background: 'var(--background)',
