@@ -30,9 +30,8 @@ const TheMenu = (): JSX.Element => {
         </ul>
       </div>
 
-      {/* Кнопка */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen(() => !isOpen)}
         className="sticky bottom-0 left-0 z-50 flex w-[100%] items-center justify-center gap-2 bg-orange-500 p-4 text-white"
       >
         <TbArrowBigUpLinesFilled

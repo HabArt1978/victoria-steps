@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import { useCallback, type JSX } from 'react'
+import { type JSX } from 'react'
 import SectionContainer from '../Containers/SectionContainer'
 import type { OurWorksListData } from './types'
 
@@ -11,12 +11,9 @@ const OurWorksList = ({ quantity, data }: OurWorksListData): JSX.Element => {
 
   const displayedData = quantity === 'all' ? data : data.slice(0, quantity)
 
-  const handleClick = useCallback(
-    (id: string) => {
-      router.push(`/pages/portfolio/${id}`)
-    },
-    [router]
-  )
+  const handleClick = (id: string): void => {
+    router.push(`/pages/portfolio/${id}`)
+  }
 
   return (
     <SectionContainer>
