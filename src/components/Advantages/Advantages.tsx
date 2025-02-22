@@ -3,23 +3,26 @@ import type { JSX } from 'react'
 import SectionContainer from '../Containers/SectionContainer'
 import { H2, P } from '../UI/Typography'
 import styles from './Advantages.module.css'
+import {
+  advantageContainer,
+  advantageDescription,
+  advantageIcon,
+  advantageTitle
+} from './twStyles'
 
 const Advantages = (): JSX.Element => {
   return (
     <SectionContainer>
       <h1 className={styles.srOnly}>Наши преимущества</h1>
-      <ul className="flex items-baseline justify-between">
+      <ul className="flex flex-wrap justify-center gap-x-8 gap-y-10 align-baseline xl:justify-between">
         {advantagesData.map((item, idx) => (
           <li
             key={item.title + idx}
-            className="flex w-[18%] flex-col items-center space-y-4 text-center align-middle"
+            className={advantageContainer()}
           >
-            <item.icon
-              size={40}
-              color="#ea580c"
-            />
-            <H2 className="text-3xl tracking-wider">{item.title}</H2>
-            <P>{item.description}</P>
+            <item.icon className={advantageIcon()} />
+            <H2 className={advantageTitle()}>{item.title}</H2>
+            <P className={advantageDescription()}>{item.description}</P>
           </li>
         ))}
       </ul>

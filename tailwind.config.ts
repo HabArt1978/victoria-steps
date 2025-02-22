@@ -16,7 +16,7 @@ export default {
       xmd: '710px',
       md: '900px',
       lg: '1100px',
-      xl: '1420px'
+      xl: '1450px'
     },
     extend: {
       colors: {
