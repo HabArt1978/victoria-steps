@@ -1,8 +1,7 @@
 import introductionImage from '@/assets/images/introduction.webp'
-import Social from '@/components/Social/Social'
-import { H1 } from '@/components/UI/Typography'
 import Image from 'next/image'
 import type { JSX } from 'react'
+import BannerContent from './BannerContent/BannerContent'
 
 const TheBanner = (): JSX.Element => {
   return (
@@ -20,19 +19,7 @@ const TheBanner = (): JSX.Element => {
         fetchPriority="high"
       />
 
-      <div className="absolute left-[10%] top-[55%] flex w-[80%] flex-row justify-between rounded-3xl text-4xl text-white">
-        <div className="border-l-4 border-orange-600 lg:flex-row">
-          <div className="card ml-4 rounded-box bg-amber-900 bg-opacity-75">
-            <H1 className="p-4 text-start text-white">
-              <span className="block text-4xl">Производство ступеней</span>
-              <span className="block text-4xl">из массива дуба</span>
-              <span className="block text-6xl">в Саранске</span>
-            </H1>
-          </div>
-        </div>
-
-        <Social position="vertical" />
-      </div>
+      <BannerContent />
     </div>
   )
 }

@@ -27,7 +27,10 @@ const TheFooter = (): JSX.Element => {
         </p>
       </aside>
 
-      <Social position="horizontal" />
+      <Social
+        isBackground={false}
+        position="horizontal"
+      />
     </footer>
   )
 }

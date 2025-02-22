@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="ru">
       <body
         className={cn(
-          'antialiased` flex min-h-screen flex-col',
+          'flex min-h-screen flex-col antialiased',
           fontRobotoMono.variable,
           fontRubikDirtRegular.variable,
           fontAmaticRegular.variable,

@@ -8,6 +8,10 @@ import { P } from './Typography'
 const TheMenu = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
 
+  const clickHandler = (): void => {
+    setIsOpen(() => !isOpen)
+  }
+
   return (
     <>
       <div
@@ -31,8 +35,8 @@ const TheMenu = (): JSX.Element => {
       </div>
 
       <button
-        onClick={() => setIsOpen(() => !isOpen)}
-        className="sticky bottom-0 left-0 z-50 flex w-[100%] items-center justify-center gap-2 bg-orange-500 p-4 text-white"
+        onClick={() => clickHandler()}
+        className="sticky bottom-0 left-0 z-50 flex w-[100%] items-center justify-center gap-2 bg-orange-600 p-4 text-white xmd:hidden"
       >
         <TbArrowBigUpLinesFilled
           size={30}
@@ -41,7 +45,7 @@ const TheMenu = (): JSX.Element => {
             isOpen ? 'rotate-180' : ''
           )}
         />
-        <P className="transition duration-300">
+        <P className="pt-1 font-rubikDirt text-sm uppercase tracking-wider transition duration-300">
           {isOpen ? 'Закрыть меню' : 'Открыть меню'}
         </P>
       </button>

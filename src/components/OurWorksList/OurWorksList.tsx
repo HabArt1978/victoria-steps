@@ -11,7 +11,7 @@ const OurWorksList = ({ quantity, data }: OurWorksListData): JSX.Element => {
 
   const displayedData = quantity === 'all' ? data : data.slice(0, quantity)
 
-  const handleClick = (id: string): void => {
+  const clickHandler = (id: string): void => {
     router.push(`/pages/portfolio/${id}`)
   }
 
@@ -26,7 +26,7 @@ const OurWorksList = ({ quantity, data }: OurWorksListData): JSX.Element => {
           <li
             key={id}
             className="relative h-80 w-[31%] cursor-pointer overflow-hidden rounded-lg"
-            onClick={() => handleClick(id)}
+            onClick={() => clickHandler(id)}
           >
             <Image
               src={image}

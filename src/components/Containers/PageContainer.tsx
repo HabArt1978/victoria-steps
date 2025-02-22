@@ -9,7 +9,11 @@ const PageContainer = ({
   children: React.ReactNode
   className?: string
 }>): JSX.Element => {
-  return <div className={cn('mx-auto w-[90%]', className)}>{children}</div>
+  return (
+    <div className={cn('mx-auto w-[90%] overflow-hidden', className)}>
+      {children}
+    </div>
+  )
 }
 
 export default PageContainer

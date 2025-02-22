@@ -1,3 +1,2 @@
-export interface Position {
-  position: 'horizontal' | 'vertical'
-}
+export type Position = 'horizontal' | 'vertical'
+export type Background = boolean
