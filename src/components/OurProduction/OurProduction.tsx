@@ -1,4 +1,4 @@
-import fallBackImage from '@/assets/images/fallback-image.webp'
+import fallBackImage from '@/assets/images/fallback-image-for-production.webp'
 import { ourProductionData } from '@/library/dataForComponents/ourProductionData/ourProductionData'
 import Image from 'next/image'
 import type { JSX } from 'react'

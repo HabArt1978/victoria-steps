@@ -1,12 +1,12 @@
 import PageContainer from '@/components/Containers/PageContainer'
-import OurWorksList from '@/components/OurWorksList/OurWorksList'
+import OurWorks from '@/components/OurWorks/OurWorks'
 import { ourWorksData } from '@/library/dataForComponents/ourWorksData/ourWorksData'
 import type { JSX } from 'react'
 
 const PortfolioPage = (): JSX.Element => {
   return (
     <PageContainer>
-      <OurWorksList
+      <OurWorks
         quantity={'all'}
         data={ourWorksData}
       />

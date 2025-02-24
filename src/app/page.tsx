@@ -1,7 +1,7 @@
 import Advantages from '@/components/Advantages/Advantages'
 import PageContainer from '@/components/Containers/PageContainer'
 import OurProduction from '@/components/OurProduction/OurProduction'
-import OurWorksList from '@/components/OurWorksList/OurWorksList'
+import OurWorksList from '@/components/OurWorks/OurWorks'
 import TheIntroduction from '@/components/TheIntroduction/TheIntroduction'
 import { ourWorksData } from '@/library/dataForComponents/ourWorksData/ourWorksData'
 import type { JSX } from 'react'
@@ -19,7 +19,7 @@ const HomePage = (): JSX.Element => {
 
         <div className="divider divider-horizontal mx-auto h-14 md:h-20" />
         <OurWorksList
-          quantity={6}
+          quantity={5}
           data={ourWorksData}
         />
       </PageContainer>
