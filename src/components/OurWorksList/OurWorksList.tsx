@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { type JSX } from 'react'
 import SectionContainer from '../Containers/SectionContainer'
+import { H1 } from '../UI/Typography'
 import type { OurWorksListData } from './types'
 
 const OurWorksList = ({ quantity, data }: OurWorksListData): JSX.Element => {
@@ -17,9 +18,9 @@ const OurWorksList = ({ quantity, data }: OurWorksListData): JSX.Element => {
 
   return (
     <SectionContainer>
-      <h1 className="text-center font-rubikDirt text-6xl text-amber-700">
+      <H1 className="mt-10 text-3xl xsm:text-4xl sm:text-5xl md:my-16 md:text-6xl">
         Наши работы
-      </h1>
+      </H1>
 
       <ul className="mt-20 flex flex-wrap justify-center gap-6">
         {displayedData?.map(({ alt, image, id }) => (

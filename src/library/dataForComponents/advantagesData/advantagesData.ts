@@ -11,12 +11,6 @@ export const advantagesData: AdvantagesData[] = [
     description: 'Прочность и устойчивость к деформации'
   },
   {
-    icon: FaRegHandshake,
-    title: 'Доверие покупателей',
-    description: 'К нам возвращаются снова и рекомендуют друзьям'
-  },
-
-  {
     icon: AiOutlineSafety,
     title: 'Безопасные материалы',
     description: 'Соответствуем требованиям и стандартам качества'
@@ -25,6 +19,11 @@ export const advantagesData: AdvantagesData[] = [
     icon: GiWallet,
     title: 'Доступные цены',
     description: 'Собственное производство по доступной цене'
+  },
+  {
+    icon: FaRegHandshake,
+    title: 'Доверие покупателей',
+    description: 'К нам возвращаются снова и рекомендуют друзьям'
   },
   {
     icon: GrValidate,

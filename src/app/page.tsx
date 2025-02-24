@@ -13,7 +13,11 @@ const HomePage = (): JSX.Element => {
 
       <PageContainer className="-mt-24">
         <Advantages />
+
+        <div className="divider divider-horizontal mx-auto h-14 md:h-20" />
         <OurProduction />
+
+        <div className="divider divider-horizontal mx-auto h-14 md:h-20" />
         <OurWorksList
           quantity={6}
           data={ourWorksData}

@@ -10,7 +10,9 @@ const PageContainer = ({
   className?: string
 }>): JSX.Element => {
   return (
-    <div className={cn('mx-auto w-[90%] overflow-hidden', className)}>
+    <div
+      className={cn('mx-auto w-[96%] overflow-hidden xmd:w-[90%]', className)}
+    >
       {children}
     </div>
   )
