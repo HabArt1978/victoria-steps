@@ -15,7 +15,7 @@ const HeaderNavigation = ({ navLinks }: NavBarLinks): JSX.Element => {
   const pathname = usePathname()
 
   return (
-    <nav className="hidden rounded-xl bg-[rgba(55,65,81,0.9)] p-3 xmd:flex">
+    <nav className="flex rounded-xl bg-[rgba(55,65,81,0.9)] p-3">
       <ul className="flex space-x-5 px-1">
         {navLinks.map((link, idx) => {
           const isActive = pathname === link.path

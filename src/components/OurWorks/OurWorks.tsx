@@ -21,18 +21,18 @@ const OurWorks = ({ quantity, data }: OurWorksListData): JSX.Element => {
 
   return (
     <SectionContainer>
-      <H1 className="mt-10 text-3xl xsm:text-4xl sm:text-5xl md:my-16 md:text-6xl">
+      <H1 className="my-16 text-3xl xsm:text-4xl sm:text-5xl md:my-20 md:text-6xl">
         Наши ступени
       </H1>
 
-      <ul className="mt-20 flex flex-wrap justify-center gap-6">
+      <ul className="flex flex-wrap justify-center gap-6">
         {displayedData?.map(({ alt, image, id }) => {
           const imageSrc = image || fallBackImage
 
           return (
             <li
               key={id}
-              className="group relative h-80 cursor-pointer overflow-hidden rounded-lg sm:w-[48%] md:w-[31%]"
+              className="group relative h-80 w-full cursor-pointer overflow-hidden rounded-lg sm:w-[48%] md:w-[31%]"
               onClick={() => clickHandler(id)}
             >
               <Image
@@ -40,7 +40,8 @@ const OurWorks = ({ quantity, data }: OurWorksListData): JSX.Element => {
                 alt={alt}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="h-full w-full object-cover transition-transform duration-300 ease-in hover:scale-110 group-hover:scale-110"
-                loading="lazy"
+                fill
+                placeholder="blur"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 text-lg font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <div className="flex flex-col items-center space-y-2">
@@ -53,13 +54,13 @@ const OurWorks = ({ quantity, data }: OurWorksListData): JSX.Element => {
         })}
 
         {quantity !== 'all' ? (
-          <li className="relative h-80 cursor-pointer overflow-hidden rounded-lg sm:w-[48%] md:w-[31%]">
+          <li className="relative h-80 w-full cursor-pointer overflow-hidden rounded-lg sm:w-[48%] md:w-[31%]">
             <Image
               src={fallBackImage}
               alt="изображение заглушка для ссылки на страницу с нашими ступенями"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="h-full w-full object-cover transition-transform duration-300 ease-in hover:scale-110"
-              loading="lazy"
+              fill
               placeholder="blur"
             />
 

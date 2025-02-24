@@ -13,10 +13,9 @@ const TheBanner = (): JSX.Element => {
       <Image
         src={introductionImage}
         alt="Процесс производства ступеней для лестниц на нашем заводе"
-        placeholder="blur"
         className="absolute left-0 top-0 object-cover object-center"
         fill
-        fetchPriority="high"
+        placeholder="blur"
       />
 
       <BannerContent />
