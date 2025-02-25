@@ -8,7 +8,7 @@ const TheFooter = (): JSX.Element => {
 
   return (
     <footer className="footer footer-center grid grid-cols-1 bg-neutral p-8 text-neutral-content md:font-normal min-[1000px]:grid-cols-3">
-      <aside className="my-auto flex items-center">
+      <aside className="items-center min-[1000px]:mr-auto min-[1000px]:flex">
         <LabelIcon />
         <p className="ml-2 text-center font-robotoMono">
           <span className="block">
