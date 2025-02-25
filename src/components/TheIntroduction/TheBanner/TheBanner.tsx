@@ -1,4 +1,5 @@
 import introductionImage from '@/assets/images/introduction.webp'
+import LabelIcon from '@/components/LabelIcon/LabelIcon'
 import Image from 'next/image'
 import type { JSX } from 'react'
 import BannerContent from './BannerContent/BannerContent'
@@ -16,6 +17,11 @@ const TheBanner = (): JSX.Element => {
         className="absolute left-0 top-0 object-cover object-center"
         fill
         placeholder="blur"
+      />
+
+      <LabelIcon
+        isInvertColor={false}
+        className="absolute left-1/2 top-32 z-50 h-24 -translate-x-1/2 bg-[rgba(255,255,255,0.8)] lg:left-[5.5rem] lg:top-5"
       />
 
       <BannerContent />
