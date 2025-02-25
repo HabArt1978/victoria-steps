@@ -4,15 +4,15 @@ import { FaVk } from 'react-icons/fa'
 import { IoIosMail, IoLogoWhatsapp } from 'react-icons/io'
 import { RiTelegram2Fill } from 'react-icons/ri'
 import { socialContainer, socialLink } from './twStyles'
-import type { Background, Position } from './types'
-interface SocialProps {
-  position: Position
-  isBackground: Background
-}
+import type { SocialProps } from './types'
 
-const Social = ({ isBackground, position }: SocialProps): JSX.Element => {
+const Social = ({
+  position,
+  isBackground,
+  isVisible
+}: SocialProps): JSX.Element => {
   return (
-    <div className={socialContainer(position)}>
+    <div className={socialContainer(position, isVisible)}>
       <Link
         href="#"
         className={socialLink(isBackground)}

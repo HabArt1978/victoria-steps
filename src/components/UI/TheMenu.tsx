@@ -2,8 +2,7 @@
 
 import { cn } from '@/utils/cn'
 import { useState, type JSX } from 'react'
-import { TbArrowBigUpLinesFilled } from 'react-icons/tb'
-import { P } from './Typography'
+import { FiMenu } from 'react-icons/fi'
 
 const TheMenu = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,7 +15,7 @@ const TheMenu = (): JSX.Element => {
     <>
       <div
         className={cn(
-          'fixed bottom-0 left-0 z-50 w-screen overflow-hidden bg-orange-300 transition-all duration-300',
+          'fixed bottom-0 left-0 z-50 w-screen overflow-hidden bg-neutral transition-all duration-300',
 
           {
             'visible h-screen opacity-100': isOpen,
@@ -36,18 +35,9 @@ const TheMenu = (): JSX.Element => {
 
       <button
         onClick={() => clickHandler()}
-        className="sticky bottom-0 left-0 z-50 flex w-[100%] items-center justify-center gap-2 bg-orange-600 p-4 text-white xmd:hidden"
+        className="btn btn-circle btn-md fixed right-4 top-4 z-50 border-none bg-gradient-to-r from-yellow-400 to-red-600 bg-[length:200%_200%] transition-all duration-300 ease-in-out hover:from-red-600 hover:to-yellow-400 hover:bg-[length:100%_100%] xmd:hidden"
       >
-        <TbArrowBigUpLinesFilled
-          size={30}
-          className={cn(
-            'transition-transform duration-300',
-            isOpen ? 'rotate-180' : ''
-          )}
-        />
-        <P className="pt-1 font-rubikDirt text-sm uppercase tracking-wider transition duration-300">
-          {isOpen ? 'Закрыть меню' : 'Открыть меню'}
-        </P>
+        <FiMenu className="h-6 w-6 text-white" />
       </button>
     </>
   )

@@ -44,6 +44,7 @@ const BannerContent = (): JSX.Element => {
       <Social
         position={position}
         isBackground={true}
+        isVisible={false}
       />
     </div>
   )
