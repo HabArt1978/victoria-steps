@@ -1,15 +1,35 @@
 'use client'
 
 import { cn } from '@/utils/cn'
-import { useState, type JSX } from 'react'
+import { useEffect, useState, type JSX } from 'react'
 import { FiMenu } from 'react-icons/fi'
+import { useMediaQuery } from 'usehooks-ts'
 
 const TheMenu = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(() => true)
+  }, [])
+
+  // Вызываем useMediaQuery всегда, но отключаем SSR
+  const isExtraMiddleScreen = useMediaQuery('(min-width: 710px)', {
+    initializeWithValue: false, // Отключает начальный рендер на сервере
+    defaultValue: false // <-- Это предотвращает ошибку гидратации
+  })
+
+  useEffect(() => {
+    if (isExtraMiddleScreen) {
+      setIsOpen(false)
+    }
+  }, [isExtraMiddleScreen])
 
   const clickHandler = (): void => {
-    setIsOpen(() => !isOpen)
+    setIsOpen((prevState) => !prevState)
   }
+
+  if (!isMounted) return <></> // Избегаем гидратации, пока не смонтировано
 
   return (
     <>

@@ -24,8 +24,6 @@ const BannerContent = (): JSX.Element => {
 
   if (!isMounted) return <></> // Избегаем гидратации, пока не смонтировано
 
-  if (!isMounted) return <></>
-
   return (
     <div className={bannerContentContainer()}>
       <div className="mb-5 ml-5 border-l-4 border-orange-600 sm:ml-0 md:mb-0 lg:flex-row">
