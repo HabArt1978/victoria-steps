@@ -1,5 +1,6 @@
 'use client'
 
+import { ourContactsData as contacts } from '@/library/dataForComponents/ourContactsData/ourContactsData'
 import { navBarLinks } from '@/library/routeAndLinkData/routeAndLinkData'
 import { cn } from '@/utils/cn'
 import Link from 'next/link'
@@ -7,6 +8,9 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState, type JSX } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { useMediaQuery } from 'usehooks-ts'
+import LabelIcon from '../LabelIcon/LabelIcon'
+import Social from '../Social/Social'
+import { P } from './Typography'
 
 const TheMenu = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
@@ -39,7 +43,7 @@ const TheMenu = (): JSX.Element => {
     <>
       <div
         className={cn(
-          'fixed bottom-0 left-0 z-50 w-screen overflow-hidden bg-neutral transition-all duration-300',
+          'fixed bottom-0 left-0 z-50 flex w-full flex-col items-center justify-around overflow-hidden bg-neutral transition-all duration-300',
 
           {
             'visible h-screen opacity-100': isOpen,
@@ -47,7 +51,32 @@ const TheMenu = (): JSX.Element => {
           }
         )}
       >
-        <ul className="flex h-full flex-col items-center justify-center space-y-4 text-xl font-bold">
+        <LabelIcon isInvertColor={true} />
+
+        <address className="space-y-4 font-robotoMono not-italic">
+          <P>
+            Телефон:{' '}
+            <Link
+              href="tel:+78888888888"
+              target="_blank"
+              className="btn btn-outline btn-sm ml-2 text-gray-300 hover:bg-white"
+            >
+              {contacts.phone}
+            </Link>
+          </P>
+          <P>
+            E-mail:{' '}
+            <Link
+              href="mailto:viktorua18@yandex.ru"
+              target="_blank"
+              className="btn btn-outline btn-sm ml-2 text-gray-300 hover:bg-white"
+            >
+              {contacts.email}
+            </Link>
+          </P>
+        </address>
+
+        <ul className="flex w-full flex-col items-center justify-center space-y-4 text-xl font-bold">
           {navBarLinks.map((link, idx) => {
             const isActive = pathname === link.path
 
@@ -73,6 +102,13 @@ const TheMenu = (): JSX.Element => {
             )
           })}
         </ul>
+
+        <Social
+          isBackground={false}
+          isVisible={true}
+          position="horizontal"
+          className="my-0 w-full px-8"
+        />
       </div>
 
       <button

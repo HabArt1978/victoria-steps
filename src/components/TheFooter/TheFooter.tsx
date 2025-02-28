@@ -31,6 +31,7 @@ const TheFooter = (): JSX.Element => {
         isBackground={false}
         position="horizontal"
         isVisible={true}
+        className="space-x-4 min-[1000px]:space-x-0"
       />
     </footer>
   )

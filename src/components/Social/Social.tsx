@@ -9,10 +9,11 @@ import type { SocialProps } from './types'
 const Social = ({
   position,
   isBackground,
-  isVisible
+  isVisible,
+  className
 }: SocialProps): JSX.Element => {
   return (
-    <div className={socialContainer(position, isVisible)}>
+    <div className={socialContainer(position, isVisible, className)}>
       <Link
         href="#"
         className={socialLink(isBackground)}

@@ -18,21 +18,21 @@ const OurContacts = (): JSX.Element => {
           <H1 className="text-start">Как нас найти</H1>
 
           <address className="space-y-4 py-12 font-normal not-italic no-underline">
-            <P>
+            <P className="flex items-center">
               Телефон:
               <Link
                 href="tel:+78888888888"
-                className={`${contactsLink}`}
+                className={contactsLink}
                 target="_blank"
               >
                 {contacts.phone}
               </Link>
             </P>
-            <P>
+            <P className="flex items-center">
               E-mail:{' '}
               <Link
                 href="mailto:viktorua18@yandex.ru"
-                className={`${contactsLink}`}
+                className={contactsLink}
                 target="_blank"
               >
                 {contacts.email}
