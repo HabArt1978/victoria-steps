@@ -1,6 +1,9 @@
 'use client'
 
+import { navBarLinks } from '@/library/routeAndLinkData/routeAndLinkData'
 import { cn } from '@/utils/cn'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState, type JSX } from 'react'
 import { FiMenu, FiX } from 'react-icons/fi'
 import { useMediaQuery } from 'usehooks-ts'
@@ -8,6 +11,7 @@ import { useMediaQuery } from 'usehooks-ts'
 const TheMenu = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     setIsMounted(() => true)
@@ -44,18 +48,36 @@ const TheMenu = (): JSX.Element => {
         )}
       >
         <ul className="flex h-full flex-col items-center justify-center space-y-4 text-xl font-bold">
-          <li>Пункты меню</li>
-          <li>Пункты меню</li>
-          <li>Пункты меню</li>
-          <li>Пункты меню</li>
-          <li>Пункты меню</li>
-          <li>Пункты меню</li>
+          {navBarLinks.map((link, idx) => {
+            const isActive = pathname === link.path
+
+            return (
+              <Link
+                key={link.label + idx}
+                href={link.path}
+                className={cn(
+                  'btn w-[70%] border-slate-600 bg-slate-600 uppercase text-gray-300',
+                  'transition duration-150',
+                  'hover:border-white hover:bg-slate-700 hover:text-white hover:shadow-md hover:shadow-orange-600',
+                  'active:shadow-inner',
+
+                  {
+                    'border border-white bg-slate-700 text-white shadow-md shadow-orange-600':
+                      isActive
+                  }
+                )}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </Link>
+            )
+          })}
         </ul>
       </div>
 
       <button
         onClick={() => clickHandler()}
-        className="btn btn-circle btn-md fixed right-4 top-4 z-50 border-none bg-gradient-to-r from-yellow-400 to-red-600 bg-[length:200%_200%] transition-all duration-300 ease-in-out hover:from-red-600 hover:to-yellow-400 hover:bg-[length:100%_100%] xmd:hidden"
+        className="btn btn-circle btn-md fixed right-4 top-4 z-50 border-none bg-gradient-to-r from-yellow-400 to-red-600 bg-[length:200%_200%] transition-all duration-300 ease-in-out hover:from-yellow-500 hover:to-red-700 hover:shadow-md xmd:hidden"
       >
         <div className="transition duration-500">
           {!isOpen ? (
