@@ -8,7 +8,8 @@ export const advantagesData: AdvantagesData[] = [
   {
     icon: AiOutlineBlock,
     title: 'Уникальная технология',
-    description: 'Прочность и устойчивость к деформации'
+    description:
+      'Прочность и устойчивость к деформации при изменении влажности и температуры.'
   },
   {
     icon: AiOutlineSafety,
