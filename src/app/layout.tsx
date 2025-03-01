@@ -13,7 +13,7 @@ import type { JSX } from 'react'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'), // При хостинге сайта указать актуальный домен
+  metadataBase: new URL('https://stair-treads-second-version.vercel.app/'), // При хостинге сайта указать актуальный домен
   title: 'Производство ступеней для лестниц в Саранске | ООО Виктория',
   description:
     'Производство комбинированных деревянных ступеней для лестниц. Высокое качество, оригинальная технология, доступные цены. Закажите ступени для лестниц у нас!',
