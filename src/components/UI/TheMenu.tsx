@@ -1,6 +1,5 @@
 'use client'
 
-import { ourContactsData as contacts } from '@/library/dataForComponents/ourContactsData/ourContactsData'
 import { navBarLinks } from '@/library/routeAndLinkData/routeAndLinkData'
 import { cn } from '@/utils/cn'
 import { mobileMenuButton } from '@/utils/styles'
@@ -11,7 +10,6 @@ import { FiMenu, FiX } from 'react-icons/fi'
 import { useMediaQuery } from 'usehooks-ts'
 import LabelIcon from '../LabelIcon/LabelIcon'
 import Social from '../Social/Social'
-import { P } from './Typography'
 
 const TheMenu = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
@@ -53,29 +51,6 @@ const TheMenu = (): JSX.Element => {
         )}
       >
         <LabelIcon isInvertColor={true} />
-
-        <address className="space-y-4 font-robotoMono not-italic">
-          <P>
-            Телефон:{' '}
-            <Link
-              href="tel:+78888888888"
-              target="_blank"
-              className="btn btn-outline btn-sm ml-2 text-gray-300 hover:bg-white"
-            >
-              {contacts.phone}
-            </Link>
-          </P>
-          <P>
-            E-mail:{' '}
-            <Link
-              href="mailto:viktorua18@yandex.ru"
-              target="_blank"
-              className="btn btn-outline btn-sm ml-2 text-gray-300 hover:bg-white"
-            >
-              {contacts.email}
-            </Link>
-          </P>
-        </address>
 
         <ul className="flex w-full flex-col items-center justify-center space-y-4 text-xl font-bold">
           {navBarLinks.map((link, idx) => {
