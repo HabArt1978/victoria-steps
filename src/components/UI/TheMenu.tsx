@@ -3,6 +3,7 @@
 import { ourContactsData as contacts } from '@/library/dataForComponents/ourContactsData/ourContactsData'
 import { navBarLinks } from '@/library/routeAndLinkData/routeAndLinkData'
 import { cn } from '@/utils/cn'
+import { buttonLinkClasses } from '@/utils/styles'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState, type JSX } from 'react'
@@ -85,13 +86,12 @@ const TheMenu = (): JSX.Element => {
                 key={link.label + idx}
                 href={link.path}
                 className={cn(
-                  'btn w-[70%] border-slate-600 bg-slate-600 uppercase text-gray-300',
-                  'transition duration-150',
-                  'hover:border-white hover:bg-slate-700 hover:text-white hover:shadow-md hover:shadow-orange-600',
-                  'active:shadow-inner',
+                  buttonLinkClasses,
+
+                  'w-[70%] border-slate-600 bg-slate-600 text-gray-300',
 
                   {
-                    'border border-white bg-slate-700 text-white shadow-md shadow-orange-600':
+                    'border border-white bg-slate-800 text-white shadow-md shadow-orange-600':
                       isActive
                   }
                 )}

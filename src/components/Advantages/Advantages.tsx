@@ -1,14 +1,8 @@
 import { advantagesData } from '@/library/dataForComponents/advantagesData/advantagesData'
 import type { JSX } from 'react'
 import SectionContainer from '../Containers/SectionContainer'
-import { H2, P } from '../UI/Typography'
 import styles from './Advantages.module.css'
-import {
-  advantageContainer,
-  advantageDescription,
-  advantageIcon,
-  advantageTitle
-} from './twStyles'
+import { advantageContainer } from './twStyles'
 
 const Advantages = (): JSX.Element => {
   return (
@@ -18,11 +12,15 @@ const Advantages = (): JSX.Element => {
         {advantagesData.map((item, idx) => (
           <li
             key={item.title + idx}
-            className={advantageContainer()}
+            className={advantageContainer}
           >
-            <item.icon className={advantageIcon()} />
-            <H2 className={advantageTitle()}>{item.title}</H2>
-            <P className={advantageDescription()}>{item.description}</P>
+            <item.icon className="h-10 w-10 text-orange-600 md:h-12 md:w-12" />
+            <h2 className="text-nowrap font-amaticBold text-2xl text-orange-600 md:text-3xl">
+              {item.title}
+            </h2>
+            <p className="text-md font-robotoMono font-light tracking-normal md:text-lg">
+              {item.description}
+            </p>
           </li>
         ))}
       </ul>

@@ -1,14 +1,17 @@
+import { cn } from '@/utils/cn'
+import { pForList } from '@/utils/styles'
 import type { JSX } from 'react'
+import ProseContainer from '../Containers/ProseContainer'
 import SectionContainer from '../Containers/SectionContainer'
-import { H1, H2, H3, Li, P } from '../UI/Typography'
+import { H1, H2, H3, P, Ul } from '../UI/Typography'
 
 const DeliverAndPayment = (): JSX.Element => {
   return (
     <SectionContainer>
       <H1>Доставка и оплата</H1>
 
-      <div className="mx-auto mt-10 max-w-[60%] space-y-4">
-        <P className="indent-4">
+      <ProseContainer>
+        <P>
           Вы можете выбрать для себя наиболее удобные способы оплаты и доставки
           приобретенных товаров и, таким образом, сэкономить свое время.
         </P>
@@ -16,57 +19,76 @@ const DeliverAndPayment = (): JSX.Element => {
         <div className="divider"></div>
 
         <H2>Оплата</H2>
-        <P className="indent-4">
-          Оплата возможна наличными либо на расчётный счёт.
-        </P>
+        <P>Оплата возможна наличными либо на расчётный счёт.</P>
 
         <H3 className="mt-6">Наличный расчет</H3>
-        <ul className="list-disc space-y-2 pl-6">
-          <Li>
-            Оплата производится в офисе <strong>«ООО Виктория»</strong>.
-          </Li>
-        </ul>
+        <Ul>
+          <li>
+            <P className={pForList}>
+              Оплата производится в офисе <strong>«ООО Виктория»</strong>.
+            </P>
+          </li>
+        </Ul>
 
         <H3 className="mt-6">Безналичный расчет</H3>
-        <P className="indent-4">
+        <P>
           Оплата осуществляется на основании выставленных счетов. После оплаты
           высылаются все соответствующие документы.
         </P>
 
-        <P>Оплатить покупку можно:</P>
-        <ul className="list-disc space-y-2 pl-6">
-          <Li>Безналичным расчетом (для юридических лиц);</Li>
-        </ul>
+        <Ul>
+          <li>
+            <P className={pForList}>
+              Безналичным расчетом (для юридических лиц)
+            </P>
+          </li>
+        </Ul>
 
         <div className="divider"></div>
 
         <H2 className="mt-6">Доставка</H2>
 
         <H3 className="mt-6">Доставка курьером</H3>
-        <ul className="list-disc space-y-2 pl-6">
-          <Li>
-            Делаете заявку на электронную почту с указанием контактных данных.
-          </Li>
-          <Li>С вами созванивается менеджер и подтверждает заказ.</Li>
-          <Li>Доставка осуществляется после 100% оплаты.</Li>
-          <Li>Доставка осуществляется без разгрузки.</Li>
-          <Li className="uppercase text-amber-700">
-            <P className="font-semibold">
+        <Ul>
+          <li>
+            <P className={pForList}>
+              Делаете заявку на электронную почту с указанием контактных данных.
+            </P>
+          </li>
+          <li>
+            <P className={pForList}>
+              С вами созванивается менеджер и подтверждает заказ.
+            </P>
+          </li>
+          <li>
+            <P className={pForList}>
+              Доставка осуществляется после 100% оплаты.
+            </P>
+          </li>
+          <li>
+            <P className={pForList}>Доставка осуществляется без разгрузки.</P>
+          </li>
+          <li className="uppercase text-amber-700">
+            <P className={cn(pForList, 'font-semibold')}>
               Если машина прибыла в пункт назначения, но услуга не была оказана
               по вине клиента, то будет выставлен счёт за «холостой прогон».
             </P>
-            <P className="mt-4 font-semibold">
+            <P className={cn(cn(pForList, 'mt-4 font-semibold'))}>
               Тариф данной услуги равен тарифу доставки груза, который был
               рассчитан при оформлении заявки.
             </P>
-          </Li>
-        </ul>
+          </li>
+        </Ul>
 
         <H3 className="mt-6">Самовывоз</H3>
-        <ul className="list-disc space-y-2 pl-6">
-          <Li>Самовывоз возможен со склада компании в вашем городе.</Li>
-        </ul>
-      </div>
+        <Ul>
+          <li>
+            <P className={pForList}>
+              Самовывоз возможен со склада компании в вашем городе.
+            </P>
+          </li>
+        </Ul>
+      </ProseContainer>
     </SectionContainer>
   )
 }

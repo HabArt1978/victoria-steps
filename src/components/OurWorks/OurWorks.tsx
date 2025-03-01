@@ -1,13 +1,14 @@
 'use client'
 
 import fallBackImage from '@/assets/images/fallback-image-for-works.webp'
+import { buttonLinkClasses } from '@/utils/styles'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { type JSX } from 'react'
 import { MdOutlineZoomOutMap } from 'react-icons/md'
 import SectionContainer from '../Containers/SectionContainer'
-import { H1, H3, P } from '../UI/Typography'
-import { btnClasses } from './twStyles'
+import { H1, P } from '../UI/Typography'
 import type { OurWorksListData } from './types'
 
 const OurWorks = ({ quantity, data }: OurWorksListData): JSX.Element => {
@@ -21,9 +22,7 @@ const OurWorks = ({ quantity, data }: OurWorksListData): JSX.Element => {
 
   return (
     <SectionContainer>
-      <H1 className="my-16 text-3xl xsm:text-4xl sm:text-5xl md:my-20 md:text-6xl">
-        Наши ступени
-      </H1>
+      <H1 className="my-16 md:my-20">Наши ступени</H1>
 
       <ul className="flex flex-wrap justify-center gap-6">
         {displayedData?.map(({ alt, image, id }) => {
@@ -66,15 +65,15 @@ const OurWorks = ({ quantity, data }: OurWorksListData): JSX.Element => {
 
             <div className="absolute inset-0 z-10 flex items-center justify-center bg-white bg-opacity-80 text-lg font-bold">
               <div className="flex flex-col space-y-3">
-                <H3 className="font-bold text-gray-900">
+                <p className="font-amaticBold text-3xl font-bold text-gray-900 xmd:text-3xl lg:text-4xl">
                   Смотреть другие работы
-                </H3>
-                <button
-                  className={btnClasses}
-                  onClick={() => router.push('/pages/portfolio')}
+                </p>
+                <Link
+                  className={buttonLinkClasses}
+                  href="/pages/portfolio"
                 >
                   Перейти в портфолио
-                </button>
+                </Link>
               </div>
             </div>
           </li>

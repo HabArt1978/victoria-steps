@@ -20,11 +20,14 @@ const TheFooter = (): JSX.Element => {
       </aside>
 
       <aside className="mx-auto my-auto text-center">
-        <p className="font-amaticBold text-xl font-bold tracking-wider">
-          {`OOO "Виктория"`}
-          <br />
-          Производство комбинированных ступеней для строительства лестниц.
-        </p>
+        <h1 className="font-amaticBold font-bold tracking-wider">
+          <span className="text my-2 block text-2xl text-orange-500">
+            {'OOO "Виктория"'}
+          </span>
+          <span className="block text-xl">
+            Производство комбинированных ступеней для строительства лестниц.
+          </span>
+        </h1>
       </aside>
 
       <Social

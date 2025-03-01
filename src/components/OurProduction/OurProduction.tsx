@@ -1,17 +1,16 @@
 import fallBackImage from '@/assets/images/fallback-image-for-production.webp'
 import { ourProductionData } from '@/library/dataForComponents/ourProductionData/ourProductionData'
+import { buttonLinkClasses } from '@/utils/styles'
 import Image from 'next/image'
 import type { JSX } from 'react'
 import SectionContainer from '../Containers/SectionContainer'
 import { H1, H2, P } from '../UI/Typography'
-import { btnClasses, previewTextClasses, titleClasses } from './twStyles'
+import { previewTextClasses } from './twStyles'
 
 const OurProduction = (): JSX.Element => {
   return (
     <SectionContainer className="mt-0">
-      <H1 className="my-16 text-3xl xsm:text-4xl sm:text-5xl md:my-20 md:text-6xl">
-        Наше производство
-      </H1>
+      <H1 className="my-16 md:my-20">Наше производство</H1>
       <ul className="space-y-14 px-3">
         {ourProductionData.map((card, idx) => {
           const index = idx + 1
@@ -34,11 +33,11 @@ const OurProduction = (): JSX.Element => {
                   isEven ? 'md:order-2' : 'md:order-1'
                 }`}
               >
-                <H2 className={titleClasses}>{card.title}</H2>
+                <H2 className="lg:w-[440px]">{card.title}</H2>
                 <P className={previewTextClasses}>{card.previewText}</P>
 
                 <div className={isEven ? 'md:ml-auto' : 'md:mr-auto'}>
-                  <button className={btnClasses}>Узнать больше</button>
+                  <button className={buttonLinkClasses}>Узнать больше</button>
                 </div>
               </div>
 

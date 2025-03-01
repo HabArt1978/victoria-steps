@@ -1,7 +1,6 @@
 import { cn } from '@/utils/cn'
 import Image from 'next/image'
 import type { JSX } from 'react'
-import { H1 } from '../UI/Typography'
 import labelSrc from './Label.svg'
 
 interface LabelProps {
@@ -21,9 +20,9 @@ const LabelIcon = ({ isInvertColor, className }: LabelProps): JSX.Element => {
           { 'invert-0': !isInvertColor }
         )}
       />
-      <H1 className="relative top-[30%] text-nowrap text-lg text-orange-600">
+      <p className="relative top-[30%] text-nowrap font-rubikDirt text-lg text-orange-600">
         ООО Виктория
-      </H1>
+      </p>
     </div>
   )
 }

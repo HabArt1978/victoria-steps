@@ -10,7 +10,7 @@ export const H1 = ({
 }): JSX.Element => (
   <h1
     className={cn(
-      'text-center font-rubikDirt text-6xl text-amber-700',
+      'text-center font-rubikDirt text-3xl tracking-wide text-amber-700 xsm:text-4xl sm:text-5xl md:text-6xl',
       className
     )}
   >
@@ -25,7 +25,12 @@ export const H2 = ({
   children: ReactNode
   className?: string
 }): JSX.Element => (
-  <h2 className={cn('font-amaticBold text-5xl text-orange-600', className)}>
+  <h2
+    className={cn(
+      'font-amaticBold text-3xl tracking-wider text-orange-600 xmd:text-4xl lg:text-5xl',
+      className
+    )}
+  >
     {children}
   </h2>
 )
@@ -37,7 +42,12 @@ export const H3 = ({
   children: ReactNode
   className?: string
 }): JSX.Element => (
-  <h3 className={cn('font-amaticBold text-3xl text-orange-600', className)}>
+  <h3
+    className={cn(
+      'font-amaticBold text-2xl tracking-wider text-orange-600 xmd:text-3xl lg:text-4xl',
+      className
+    )}
+  >
     {children}
   </h3>
 )
@@ -51,7 +61,7 @@ export const P = ({
 }): JSX.Element => (
   <p
     className={cn(
-      'overflow-y-auto font-robotoMono text-lg font-light',
+      'overflow-y-auto hyphens-auto text-justify indent-4 font-robotoMono text-base font-light leading-relaxed tracking-normal xmd:text-lg md:indent-6 lg:text-xl',
       className
     )}
   >
@@ -59,14 +69,14 @@ export const P = ({
   </p>
 )
 
-export const Li = ({
+export const Ul = ({
   children,
   className
 }: {
   children: ReactNode
   className?: string
 }): JSX.Element => (
-  <li className={cn('font-robotoMono text-lg font-light', className)}>
+  <ul className={cn('ml-6 list-disc space-y-2 md:ml-10', className)}>
     {children}
-  </li>
+  </ul>
 )
