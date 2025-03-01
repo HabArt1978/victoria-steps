@@ -3,22 +3,31 @@
 import fallBackImage from '@/assets/images/fallback-image-for-works.webp'
 
 import { buttonLinkClasses } from '@/utils/styles'
+import type { StaticImageData } from 'next/image'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { type JSX } from 'react'
+import { useState, type JSX } from 'react'
 import { MdOutlineZoomOutMap } from 'react-icons/md'
 import SectionContainer from '../Containers/SectionContainer'
+import Modal from '../UI/Modal/Modal'
 import { H1, P } from '../UI/Typography'
 import type { OurWorksListData } from './types'
 
 const OurWorks = ({ quantity, data }: OurWorksListData): JSX.Element => {
-  const router = useRouter()
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [selectedAlt, setSelectedAlt] = useState<string>('')
 
   const displayedData = quantity === 'all' ? data : data.slice(0, quantity)
 
-  const clickHandler = (id: string): void => {
-    router.push(`/pages/portfolio/${id}`)
+  const openModal = (image: string | StaticImageData, alt: string): void => {
+    const imageUrl = typeof image === 'string' ? image : image.src // Преобразуем StaticImageData в строку
+    setSelectedImage(imageUrl)
+    setSelectedAlt(alt)
+  }
+
+  const closeModal = (): void => {
+    setSelectedImage(null) // Закрываем модальное окно
+    setSelectedAlt('') // Сбрасываем alt текст
   }
 
   return (
@@ -33,7 +42,7 @@ const OurWorks = ({ quantity, data }: OurWorksListData): JSX.Element => {
             <li
               key={id}
               className="group relative h-80 w-full cursor-pointer overflow-hidden rounded-lg sm:w-[48%] md:w-[31%]"
-              onClick={() => clickHandler(id)}
+              onClick={() => openModal(imageSrc, alt)} // Открываем модальное окно при клике
             >
               <Image
                 src={imageSrc}
@@ -82,6 +91,15 @@ const OurWorks = ({ quantity, data }: OurWorksListData): JSX.Element => {
           <></>
         )}
       </ul>
+
+      {/* Используем компонент Modal */}
+      {selectedImage && (
+        <Modal
+          imageSrc={selectedImage}
+          altText={selectedAlt}
+          onClose={closeModal}
+        />
+      )}
     </SectionContainer>
   )
 }
