@@ -2,23 +2,25 @@ import { ourContactsData as contacts } from '@/library/dataForComponents/ourCont
 import Link from 'next/link'
 import type { JSX } from 'react'
 import SectionContainer from '../Containers/SectionContainer'
-import { H1, P } from '../UI/Typography'
+import { P } from '../UI/Typography'
 import YandexMap from './YandexMap/YandexMap'
 import { addressLink } from './twStyles'
 
 const OurContacts = (): JSX.Element => {
   return (
     <SectionContainer>
-      <div className="flex flex-row">
-        <div className="h-[50vh] w-1/2">
+      <div className="xlg:mx-auto xlg:flex-row flex flex-col">
+        <div className="xlg:order-1 xlg:w-1/2 order-2 h-[50vh]">
           <YandexMap />
         </div>
 
-        <div className="w-1/2 px-16 py-8">
-          <H1 className="text-start">Как нас найти</H1>
+        <div className="xlg:w-1/2 xlg:order-2 xlg:py-16 xlg:pl-16 xlg:pr-0 order-1 flex w-full flex-col items-center xl:px-16">
+          <h1 className="xlg:text-start text-center font-rubikDirt text-3xl tracking-wide text-amber-700 xsm:text-4xl md:text-5xl xl:text-6xl">
+            Как нас найти
+          </h1>
 
-          <address className="space-y-4 py-12 not-italic no-underline">
-            <P className="flex items-center">
+          <address className="xlg:w-full xlg:space-y-4 w-[95%] space-y-8 py-12 not-italic no-underline sm:w-[80%]">
+            <P className="xlg:flex-row flex flex-col items-center space-y-2">
               <span className="font-normal">Телефон:</span>
               <Link
                 href="tel:+78888888888"
@@ -28,7 +30,7 @@ const OurContacts = (): JSX.Element => {
                 <span>{contacts.phone}</span>
               </Link>
             </P>
-            <P className="flex items-center">
+            <P className="xlg:flex-row flex flex-col items-center space-y-2">
               <span className="font-normal">E-mail:</span>
               <Link
                 href="mailto:viktorua18@yandex.ru"
