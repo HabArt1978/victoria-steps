@@ -4,13 +4,14 @@
   "private": true,
   "engines": {
     "node": ">=20.16.0 <21.0.0",
-    "pnpm": ">=9.15.4"
+    "pnpm": ">=9.15.4 <10.0.0"
   },
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preinstall": "check-node-version --node '>=20.16.0 <21.0.0' --pnpm '>=9.15.4 <10.0.0'"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -27,6 +28,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "check-node-version": "^4.2.1",
     "daisyui": "^4.12.23",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
