@@ -3,7 +3,7 @@
 import { ourContactsData as contacts } from '@/library/dataForComponents/ourContactsData/ourContactsData'
 import { navBarLinks } from '@/library/routeAndLinkData/routeAndLinkData'
 import { cn } from '@/utils/cn'
-import { buttonLinkClasses } from '@/utils/styles'
+import { mobileMenuButton } from '@/utils/styles'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState, type JSX } from 'react'
@@ -85,16 +85,7 @@ const TheMenu = (): JSX.Element => {
               <Link
                 key={link.label + idx}
                 href={link.path}
-                className={cn(
-                  buttonLinkClasses,
-
-                  'w-[70%] border-slate-600 bg-slate-600 text-gray-300',
-
-                  {
-                    'border border-white bg-slate-800 text-white shadow-md shadow-orange-600':
-                      isActive
-                  }
-                )}
+                className={mobileMenuButton(isActive)}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

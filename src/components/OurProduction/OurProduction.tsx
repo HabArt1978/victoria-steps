@@ -1,8 +1,9 @@
 import fallBackImage from '@/assets/images/fallback-image-for-production.webp'
 import { ourProductionData } from '@/library/dataForComponents/ourProductionData/ourProductionData'
-import { buttonLinkClasses } from '@/utils/styles'
+
 import Image from 'next/image'
 import type { JSX } from 'react'
+import { buttonLinkClasses } from '../../utils/styles'
 import SectionContainer from '../Containers/SectionContainer'
 import { H1, H2, P } from '../UI/Typography'
 import { previewTextClasses } from './twStyles'
