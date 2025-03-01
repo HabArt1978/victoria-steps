@@ -9,7 +9,7 @@ const Modal = ({ imageSrc, altText, onClose }: ModalProps): JSX.Element => {
       className="fixed inset-0 z-[100] flex items-center justify-center bg-gray-900 text-white"
       onClick={onClose} // Закрываем модальное окно при клике вне изображения
     >
-      <div className="relative h-[90vh] w-[90vw] shadow-[0_7px_27px_rgba(234,88,12,0.1)] shadow-orange-400">
+      <div className="relative h-[95vh] w-[95vw] shadow-[0_7px_27px_rgba(234,88,12,0.1)] shadow-orange-400">
         <Image
           src={imageSrc}
           alt={altText}
