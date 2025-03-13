@@ -2,7 +2,7 @@
 
 import { navBarLinks } from '@/library/routeAndLinkData/routeAndLinkData'
 import { cn } from '@/utils/cn'
-import { mobileMenuButton } from '@/utils/styles'
+import { mobileMenuButton } from '@/utils/globalStyles'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState, type JSX } from 'react'

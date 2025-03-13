@@ -1,5 +1,5 @@
 import { cn } from '@/utils/cn'
-import { pForList } from '@/utils/styles'
+import { pForList } from '@/utils/globalStyles'
 import type { JSX } from 'react'
 import ProseContainer from '../Containers/ProseContainer'
 import SectionContainer from '../Containers/SectionContainer'

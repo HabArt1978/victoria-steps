@@ -2,7 +2,7 @@
 
 import fallBackImage from '@/assets/images/fallback-image-for-works.webp'
 
-import { buttonLinkClasses } from '@/utils/styles'
+import { buttonLinkClasses } from '@/utils/globalStyles'
 import type { StaticImageData } from 'next/image'
 import Image from 'next/image'
 import Link from 'next/link'

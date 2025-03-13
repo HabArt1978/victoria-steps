@@ -3,7 +3,7 @@ import { ourProductionData } from '@/library/dataForComponents/ourProductionData
 
 import Image from 'next/image'
 import type { JSX } from 'react'
-import { buttonLinkClasses } from '../../utils/styles'
+import { buttonLinkClasses } from '../../utils/globalStyles'
 import SectionContainer from '../Containers/SectionContainer'
 import { H1, H2, P } from '../UI/Typography'
 import { previewTextClasses } from './twStyles'

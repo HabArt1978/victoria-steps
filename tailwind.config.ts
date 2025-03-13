@@ -2,6 +2,8 @@ import typography from '@tailwindcss/typography'
 import daisyui from 'daisyui'
 import type { Config } from 'tailwindcss'
 import { fontFamily } from 'tailwindcss/defaultTheme'
+import plugin from 'tailwindcss/plugin'
+
 export default {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -11,7 +13,6 @@ export default {
   ],
   theme: {
     screens: {
-      // стили для xsm: '320px' будут применены в диапазоне >=320px && <=640px
       xsm: '320px',
       sm: '640px',
       xmd: '710px',
@@ -33,5 +34,12 @@ export default {
       }
     }
   },
-  plugins: [typography, daisyui]
+  plugins: [
+    typography,
+    daisyui,
+    plugin(function ({ addVariant }) {
+      addVariant('h-sm', '@media (min-height: 640px)')
+    })
+  ]
 } satisfies Config
+// (min-width: 900px)

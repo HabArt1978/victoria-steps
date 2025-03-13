@@ -11,7 +11,7 @@ const HomePage = (): JSX.Element => {
     <>
       <TheIntroduction />
 
-      <PageContainer className="-mt-24">
+      <PageContainer className="-mt-14 xmd:-mt-24">
         <Advantages />
 
         <OurProduction />
