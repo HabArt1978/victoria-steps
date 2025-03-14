@@ -6,7 +6,7 @@ import { useEffect, useState, type JSX } from 'react'
 import { useMediaQuery } from 'usehooks-ts'
 import { bannerContentContainer } from './twStyles'
 
-const BannerContent = (): JSX.Element => {
+const BannerContent = (): JSX.Element | null => {
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const BannerContent = (): JSX.Element => {
 
   const position: Position = isMiddleScreen ? 'vertical' : 'horizontal'
 
-  if (!isMounted) return <></> // Избегаем гидратации, пока не смонтировано
+  if (!isMounted) return null // Избегаем гидратации, пока не смонтировано
 
   return (
     <div className={bannerContentContainer()}>

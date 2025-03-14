@@ -11,7 +11,7 @@ import { useMediaQuery } from 'usehooks-ts'
 import LabelIcon from '../LabelIcon/LabelIcon'
 import Social from '../Social/Social'
 
-const TheMenu = (): JSX.Element => {
+const TheMenu = (): JSX.Element | null => {
   const [isOpen, setIsOpen] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
   const pathname = usePathname()
@@ -36,7 +36,7 @@ const TheMenu = (): JSX.Element => {
     setIsOpen((prevState) => !prevState)
   }
 
-  if (!isMounted) return <></> // Избегаем гидратации, пока не смонтировано
+  if (!isMounted) return null // Избегаем гидратации, пока не смонтировано
 
   return (
     <>
@@ -52,7 +52,7 @@ const TheMenu = (): JSX.Element => {
       >
         <LabelIcon isInvertColor={true} />
 
-        <ul className="flex w-full flex-col items-center justify-center space-y-4 text-xl font-bold">
+        <ul className="h-xsm:space-y-5 flex w-full flex-col items-center justify-center space-y-4 text-xl font-bold">
           {navBarLinks.map((link, idx) => {
             const isActive = pathname === link.path
 
@@ -79,7 +79,7 @@ const TheMenu = (): JSX.Element => {
 
       <button
         onClick={() => clickHandler()}
-        className="btn btn-circle btn-md fixed right-4 top-4 z-50 border-none bg-gradient-to-r from-yellow-400 to-red-600 bg-[length:200%_200%] transition-all duration-300 ease-in-out hover:from-yellow-500 hover:to-red-700 hover:shadow-md xmd:hidden"
+        className="h-sm-block btn btn-circle btn-md fixed right-4 top-4 z-50 border-none bg-gradient-to-r from-yellow-400 to-red-600 bg-[length:200%_200%] transition-all duration-300 ease-in-out hover:from-yellow-500 hover:to-red-700 hover:shadow-md xmd:hidden"
       >
         <div className="transition duration-500">
           {!isOpen ? (

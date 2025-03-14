@@ -38,8 +38,8 @@ export default {
     typography,
     daisyui,
     plugin(function ({ addVariant }) {
-      addVariant('h-sm', '@media (min-height: 640px)')
+      addVariant('h-sm', '@media (max-height: 640px)')
+      addVariant('h-xsm', '@media (max-height: 500px)')
     })
   ]
 } satisfies Config
-// (min-width: 900px)

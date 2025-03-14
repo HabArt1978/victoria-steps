@@ -15,6 +15,7 @@ export const mobileMenuButton = (isActive: boolean): string =>
     'transition duration-150',
     'hover:bg-slate-700 hover:shadow-md hover:shadow-orange-600 hover:border-white',
     'active:shadow-inner  active:bg-slate-800',
+    'h-xsm:btn-sm',
 
     {
       'border border-white bg-slate-800 text-white shadow-md shadow-orange-600':

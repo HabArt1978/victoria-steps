@@ -21,7 +21,7 @@ export const socialContainer = (
         position === 'horizontal'
     },
     { 'absolute bottom-0 right-0 flex-col space-y-4': position === 'vertical' },
-    { 'hidden xmd:flex': !isVisible },
+    { 'hidden xmd:flex h-xsm-hidden': !isVisible },
 
     className
   )

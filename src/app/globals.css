@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @media (max-height: 640px) {
+    .h-sm-block {
+      display: flex !important;
+    }
+  }
+
+  @media (max-height: 480px) {
+    .h-xsm-hidden {
+      display: none !important;
+    }
+  }
+}
