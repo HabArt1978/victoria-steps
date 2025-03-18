@@ -3,6 +3,7 @@
 import { navBarLinks } from '@/library/routeAndLinkData/routeAndLinkData'
 import { cn } from '@/utils/cn'
 import { mobileMenuButton } from '@/utils/globalStyles'
+import { useScreenSize } from '@/utils/hooks/useScreenSize'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState, type JSX } from 'react'
@@ -15,22 +16,23 @@ const TheMenu = (): JSX.Element | null => {
   const [isOpen, setIsOpen] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
   const pathname = usePathname()
+  const { isHorizontal, height } = useScreenSize()
 
   useEffect(() => {
     setIsMounted(() => true)
   }, [])
 
   // Вызываем useMediaQuery всегда, но отключаем SSR
-  const isExtraMiddleScreen = useMediaQuery('(min-width: 710px)', {
+  const isMobile = useMediaQuery('(max-width: 710px)', {
     initializeWithValue: false, // Отключает начальный рендер на сервере
     defaultValue: false // <-- Это предотвращает ошибку гидратации
   })
 
   useEffect(() => {
-    if (isExtraMiddleScreen) {
+    if (!isMobile || height >= 640) {
       setIsOpen(false)
     }
-  }, [isExtraMiddleScreen])
+  }, [isMobile, height])
 
   const clickHandler = (): void => {
     setIsOpen((prevState) => !prevState)
@@ -52,7 +54,15 @@ const TheMenu = (): JSX.Element | null => {
       >
         <LabelIcon isInvertColor={true} />
 
-        <ul className="h-xsm:space-y-5 flex w-full flex-col items-center justify-center space-y-4 text-xl font-bold">
+        <ul
+          className={cn(
+            'flex w-full flex-col items-center justify-center text-xl font-bold h-xsm:space-y-0',
+            {
+              'flex w-[70%] flex-row flex-wrap gap-6': isHorizontal,
+              'space-y-4': !isHorizontal
+            }
+          )}
+        >
           {navBarLinks.map((link, idx) => {
             const isActive = pathname === link.path
 
@@ -60,7 +70,7 @@ const TheMenu = (): JSX.Element | null => {
               <Link
                 key={link.label + idx}
                 href={link.path}
-                className={mobileMenuButton(isActive)}
+                className={cn(mobileMenuButton(isActive, isHorizontal))}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -73,7 +83,9 @@ const TheMenu = (): JSX.Element | null => {
           isBackground={false}
           isVisible={true}
           position="horizontal"
-          className="my-0 w-full px-8"
+          className={cn('my-0 w-full px-8', {
+            'w-[80%]': isHorizontal
+          })}
         />
       </div>
 

@@ -9,9 +9,12 @@ export const buttonLinkClasses = cn(
   'active:shadow-inner active:bg-slate-800'
 )
 
-export const mobileMenuButton = (isActive: boolean): string =>
+export const mobileMenuButton = (
+  isActive: boolean,
+  isHorizontal: boolean
+): string =>
   cn(
-    'btn uppercase w-[70%] border-slate-600 bg-slate-600 text-gray-300',
+    'btn uppercase border-slate-600 bg-slate-600 text-gray-300',
     'transition duration-150',
     'hover:bg-slate-700 hover:shadow-md hover:shadow-orange-600 hover:border-white',
     'active:shadow-inner  active:bg-slate-800',
@@ -20,5 +23,10 @@ export const mobileMenuButton = (isActive: boolean): string =>
     {
       'border border-white bg-slate-800 text-white shadow-md shadow-orange-600':
         isActive
+    },
+
+    {
+      'w-[45%]': isHorizontal,
+      'w-[70%]': !isHorizontal
     }
   )
