@@ -2,7 +2,7 @@ import { ourContactsData as contacts } from '@/library/dataForComponents/ourCont
 import Link from 'next/link'
 import type { JSX } from 'react'
 import SectionContainer from '../Containers/SectionContainer'
-import { P } from '../UI/Typography'
+import { H1, P } from '../UI/Typography'
 import YandexMap from './YandexMap/YandexMap'
 import { addressLink } from './twStyles'
 
@@ -10,14 +10,14 @@ const OurContacts = (): JSX.Element => {
   return (
     <SectionContainer>
       <div className="flex flex-col xlg:mx-auto xlg:flex-row">
-        <div className="order-2 h-[50vh] xlg:order-1 xlg:w-1/2">
+        <div className="order-2 h-[55vh] xlg:order-1 xlg:w-1/2">
           <YandexMap />
         </div>
 
         <div className="order-1 flex w-full flex-col items-center xlg:order-2 xlg:w-1/2 xlg:py-16 xlg:pl-16 xlg:pr-0 xl:px-16">
-          <h1 className="text-center font-rubikDirt text-3xl tracking-wide text-amber-700 xsm:text-4xl md:text-5xl xlg:text-start xl:text-6xl">
+          <H1 className="md:text-5xl xlg:text-start xl:text-6xl">
             Как нас найти
-          </h1>
+          </H1>
 
           <address className="w-[95%] space-y-8 py-12 not-italic no-underline sm:w-[80%] xlg:w-full xlg:space-y-4">
             <P className="flex flex-col items-center space-y-2 xlg:flex-row">

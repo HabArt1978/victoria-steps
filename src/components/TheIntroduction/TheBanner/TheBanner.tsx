@@ -17,11 +17,12 @@ const TheBanner = (): JSX.Element => {
         className="absolute left-0 top-0 object-cover object-center"
         fill
         placeholder="blur"
+        priority
       />
 
       <LabelIcon
         isInvertColor={false}
-        className="h-xsm-top-3 absolute left-1/2 top-[10%] z-50 h-24 -translate-x-1/2 bg-[rgba(255,255,255,0.8)] xmd:top-[13%] lg:left-[5.5rem] lg:top-3"
+        className="h-xsm-top-1 absolute left-1/2 top-[10%] z-50 h-24 -translate-x-1/2 bg-[rgba(255,255,255,0.8)] xmd:top-[13%] lg:left-[5.5rem] lg:top-3"
       />
 
       <BannerContent />

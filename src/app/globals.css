@@ -16,8 +16,8 @@
   }
 
   @media (max-height: 480px) {
-    .h-xsm-top-3 {
-      top: 5% !important;
+    .h-xsm-top-1 {
+      top: 1rem !important;
     }
   }
 }
