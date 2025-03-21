@@ -33,7 +33,7 @@ const OurContacts = (): JSX.Element => {
             <P className="flex flex-col items-center space-y-2 xlg:flex-row">
               <span className="font-normal">E-mail:</span>
               <Link
-                href="mailto:viktorua18@yandex.ru"
+                href="mailto:viktorua18@yandex.ru?subject=Сообщение%20от%20пользователя%20сайта%20."
                 className={addressLink}
                 target="_blank"
               >

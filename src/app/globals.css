@@ -14,4 +14,10 @@
       display: none !important;
     }
   }
+
+  @media (max-height: 480px) {
+    .h-xsm-top-3 {
+      top: 5% !important;
+    }
+  }
 }

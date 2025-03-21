@@ -15,29 +15,33 @@ const Social = ({
   return (
     <div className={socialContainer(position, isVisible, className)}>
       <Link
-        href="#"
+        href="mailto:viktorua18@yandex.ru?subject=Сообщение%20от%20пользователя%20сайта%20."
         className={socialLink(isBackground)}
+        target="_blank"
       >
         <IoIosMail className="h-10 w-10 text-white transition-colors group-hover:text-red-600" />
       </Link>
 
       <Link
-        href="#"
+        href="https://vk.com/id872271836"
         className={socialLink(isBackground)}
+        target="_blank"
       >
         <FaVk className="hover: h-10 w-10 text-white transition-colors group-hover:text-blue-700" />
       </Link>
 
       <Link
-        href="#"
+        href="https://wa.me/79276409524?text=Сообщение%20от%20пользователя%20сайта%20."
         className={socialLink(isBackground)}
+        target="_blank"
       >
         <IoLogoWhatsapp className="h-10 w-10 text-white transition-colors group-hover:text-green-600" />
       </Link>
 
       <Link
-        href="#"
+        href="https://t.me/Artur_Khab?text=Сообщение%20от%20пользователя%20сайта%20."
         className={socialLink(isBackground)}
+        target="_blank"
       >
         <RiTelegram2Fill className="h-10 w-10 text-white transition-colors group-hover:text-blue-500" />
       </Link>
