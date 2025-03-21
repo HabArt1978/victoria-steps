@@ -17,7 +17,6 @@ const TheBanner = (): JSX.Element => {
         className="absolute left-0 top-0 object-cover object-center"
         fill
         placeholder="blur"
-        priority
       />
 
       <LabelIcon

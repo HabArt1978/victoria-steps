@@ -17,7 +17,9 @@ const Social = ({
       <Link
         href="mailto:viktorua18@yandex.ru?subject=Сообщение%20от%20пользователя%20сайта%20."
         className={socialLink(isBackground)}
+        aria-label="Напишите нам на электронную почту viktorua18@yandex.ru"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <IoIosMail className="h-10 w-10 text-white transition-colors group-hover:text-red-600" />
       </Link>
@@ -25,7 +27,9 @@ const Social = ({
       <Link
         href="https://vk.com/id872271836"
         className={socialLink(isBackground)}
+        aria-label="Перейдите к нашему профилю ВКонтакте"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <FaVk className="hover: h-10 w-10 text-white transition-colors group-hover:text-blue-700" />
       </Link>
@@ -33,7 +37,9 @@ const Social = ({
       <Link
         href="https://wa.me/79276409524?text=Сообщение%20от%20пользователя%20сайта%20."
         className={socialLink(isBackground)}
+        aria-label="Напишите нам в WhatsApp"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <IoLogoWhatsapp className="h-10 w-10 text-white transition-colors group-hover:text-green-600" />
       </Link>
@@ -41,7 +47,9 @@ const Social = ({
       <Link
         href="https://t.me/Artur_Khab?text=Сообщение%20от%20пользователя%20сайта%20."
         className={socialLink(isBackground)}
+        aria-label="Перейти к нашему каналу в Telegram"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <RiTelegram2Fill className="h-10 w-10 text-white transition-colors group-hover:text-blue-500" />
       </Link>

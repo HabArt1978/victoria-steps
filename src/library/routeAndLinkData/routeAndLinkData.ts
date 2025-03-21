@@ -7,15 +7,15 @@ const navBarLinks: NavBarLink[] = [
   },
   {
     label: 'о компании',
-    path: '/pages/aboutUs'
+    path: '/pages/about-us'
   },
   {
     label: 'контакты',
-    path: '/pages/ourContacts'
+    path: '/pages/our-contacts'
   },
   {
     label: 'доставка и оплата',
-    path: '/pages/deliverAndPayment'
+    path: '/pages/deliver-and-payment'
   },
   {
     label: 'портфолио',

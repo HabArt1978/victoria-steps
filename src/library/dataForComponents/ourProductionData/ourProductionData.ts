@@ -7,6 +7,7 @@ import type { OurProductionData } from './types'
 
 export const ourProductionData: OurProductionData[] = [
   {
+    id: 'production-technology',
     title: 'Технология производства',
     previewText:
       'Наша компания производит комбинированные ступени по оригинальной технологии из фанеры и массива ценных пород дерева.',
@@ -15,6 +16,7 @@ export const ourProductionData: OurProductionData[] = [
     image: ZeroImage
   },
   {
+    id: 'relevance-of-technology',
     title: 'Актуальность технологии',
     previewText:
       'Ступень имеет высокую прочность и устойчивость к воздействиям окружающей среды (изменение влажности и температуры в помещении).',
@@ -23,6 +25,7 @@ export const ourProductionData: OurProductionData[] = [
     image: FirstImage
   },
   {
+    id: 'advantages-of-technology',
     title: 'Преимущества технологии',
     previewText:
       'Наша ступень по сравнению со ступенями из массива имеет ряд преимуществ. Слоистая структура придаёт ей высокую прочность и устойчивость к деформации. Слои фанеры равномерно распределяют нагрузки, что делает её менее подверженной изгибу и скручиванию. Благодаря перекрёстной укладке слоёв фанеры, ступень не растрескивается и не деформируется при изменении влажности и температуры.',
@@ -31,6 +34,7 @@ export const ourProductionData: OurProductionData[] = [
     image: SecondImage
   },
   {
+    id: 'aesthetics-of-product',
     title: 'Эстетика изделия',
     previewText:
       'В эстетическом плане ступень выглядит более привлекательной по сравнению с цельноламельными ступенями из массива, так как имеет цельнотекстурный рисунок полноформатной доски.',
@@ -39,6 +43,7 @@ export const ourProductionData: OurProductionData[] = [
     image: ThirdImage
   },
   {
+    id: 'possibility-of-additional-machining',
     title: 'Возможность дополнительной механической обработки',
     previewText:
       'Толщина верхнего слоя массива позволяет не однократно шлифовать и даже брашировать поверхность ступени. Возможно изменение радиуса галта, угла ступени.',

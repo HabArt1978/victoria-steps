@@ -25,21 +25,25 @@ const OurContacts = (): JSX.Element => {
               <Link
                 href="tel:+78888888888"
                 className={addressLink}
-                target="_blank"
+                aria-label="Позвоните нам по номеру +7 (888) 888-88-88"
               >
                 <span>{contacts.phone}</span>
               </Link>
             </P>
+
             <P className="flex flex-col items-center space-y-2 xlg:flex-row">
               <span className="font-normal">E-mail:</span>
               <Link
                 href="mailto:viktorua18@yandex.ru?subject=Сообщение%20от%20пользователя%20сайта%20."
                 className={addressLink}
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Напишите нам на электронную почту viktorua18@yandex.ru"
               >
                 {contacts.email}
               </Link>
             </P>
+
             <P>
               <span className="font-normal">Адрес:</span>
               <span className="ml-4">{contacts.address}</span>

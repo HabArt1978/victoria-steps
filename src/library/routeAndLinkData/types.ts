@@ -8,8 +8,8 @@ export interface NavBarLink {
 
   path:
     | '/'
-    | '/pages/aboutUs'
-    | '/pages/ourContacts'
-    | '/pages/deliverAndPayment'
+    | '/pages/about-us'
+    | '/pages/our-contacts'
+    | '/pages/deliver-and-payment'
     | '/pages/portfolio'
 }
