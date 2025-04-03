@@ -16,6 +16,7 @@ const TheBanner = (): JSX.Element => {
         alt="Процесс производства ступеней для лестниц на нашем заводе"
         className="absolute left-0 top-0 object-cover object-center"
         fill
+        priority
         placeholder="blur"
       />
 
