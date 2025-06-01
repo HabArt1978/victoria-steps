@@ -56,10 +56,10 @@ const TheMenu = (): JSX.Element | null => {
 
         <ul
           className={cn(
-            'flex w-full flex-col items-center justify-center text-xl font-bold h-xsm:space-y-0',
+            'flex w-full flex-col items-center justify-center text-xl font-bold',
             {
-              'flex w-[70%] flex-row flex-wrap gap-6': isHorizontal,
-              'space-y-4': !isHorizontal
+              'flex w-[70%] flex-row flex-wrap gap-4': isHorizontal,
+              'gap-y-4': !isHorizontal
             }
           )}
         >
